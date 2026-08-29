@@ -8,11 +8,15 @@
     <title>Robert Software | Tecnología, Software y Soporte</title>
 
     <meta name="description"
-          content="Robert Software. Soluciones tecnológicas, software, accesorios y soporte técnico remoto para empresas, estudiantes y hogares.">
+          content="Robert Software — Tecnología, software, accesorios y soporte técnico remoto para empresas, estudiantes y hogares.">
 
     <meta name="theme-color" content="#000000">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -24,11 +28,17 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-                         "SF Pro Text", Helvetica, Arial, sans-serif;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "SF Pro Display",
+                "SF Pro Text",
+                Helvetica,
+                Arial,
+                sans-serif;
+
             background: #f5f5f7;
             color: #1d1d1f;
-            line-height: 1.45;
         }
 
         a {
@@ -36,26 +46,30 @@
             text-decoration: none;
         }
 
-        /* NAVBAR */
+        /* =========================
+           NAVBAR
+        ========================= */
 
-        nav {
+        .navbar {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 52px;
-            background: rgba(255,255,255,.88);
+            height: 54px;
+
+            z-index: 9999;
+
+            background: rgba(255,255,255,.78);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
+
             border-bottom: 1px solid rgba(0,0,0,.08);
-            z-index: 1000;
         }
 
-        .nav-container {
-            max-width: 1100px;
+        .nav-inner {
+            width: min(1100px, calc(100% - 40px));
             height: 100%;
             margin: auto;
-            padding: 0 22px;
 
             display: flex;
             align-items: center;
@@ -63,384 +77,495 @@
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 700;
-            letter-spacing: -0.6px;
+            letter-spacing: -0.7px;
         }
 
         .nav-links {
             display: flex;
             gap: 30px;
+
             list-style: none;
+
             font-size: 13px;
         }
 
         .nav-links a {
             color: #333;
-            transition: .2s;
+            transition: .25s;
         }
 
         .nav-links a:hover {
             color: #0071e3;
         }
 
-        .nav-contact {
+        .nav-button {
             color: #0071e3 !important;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-            min-height: 760px;
-            padding: 145px 25px 90px;
+
+            height: 100vh;
+            min-height: 650px;
+
+            position: relative;
 
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
 
+            color: white;
+
             background:
-                radial-gradient(circle at 50% 20%,
-                #ffffff 0%,
-                #f5f5f7 55%,
-                #e8e8ed 100%);
+                linear-gradient(
+                    rgba(0,0,0,.35),
+                    rgba(0,0,0,.62)
+                ),
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2400&q=90")
+                center / cover no-repeat;
         }
 
         .hero-content {
-            max-width: 900px;
+            width: min(900px, 90%);
+            animation: fadeUp 1s ease forwards;
         }
 
-        .eyebrow {
-            font-size: 17px;
+        .hero-small {
+            font-size: 18px;
             font-weight: 600;
-            color: #6e6e73;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            opacity: .92;
         }
 
         .hero h1 {
-            font-size: clamp(52px, 8vw, 92px);
+            font-size: clamp(55px, 9vw, 105px);
             line-height: .95;
-            letter-spacing: -5px;
-            font-weight: 700;
-            margin-bottom: 28px;
-        }
 
-        .hero h1 span {
-            background: linear-gradient(
-                90deg,
-                #111,
-                #555,
-                #111
-            );
-            -webkit-background-clip: text;
-            color: transparent;
+            letter-spacing: -6px;
+
+            margin-bottom: 30px;
         }
 
         .hero p {
-            max-width: 680px;
+            max-width: 700px;
             margin: auto;
-            font-size: 23px;
+
+            font-size: clamp(19px, 2.5vw, 25px);
+
             line-height: 1.35;
-            color: #6e6e73;
+
+            color: rgba(255,255,255,.88);
         }
 
         .buttons {
-            margin-top: 35px;
+            margin-top: 34px;
+
             display: flex;
             justify-content: center;
-            gap: 14px;
+            gap: 18px;
+
             flex-wrap: wrap;
         }
 
         .button {
-            padding: 13px 24px;
-            border-radius: 980px;
+            padding: 13px 25px;
+
+            border-radius: 999px;
+
             font-size: 16px;
             font-weight: 500;
+
             transition: .25s;
         }
 
-        .button-primary {
+        .button-blue {
             background: #0071e3;
             color: white;
         }
 
-        .button-primary:hover {
+        .button-blue:hover {
             background: #0077ed;
             transform: translateY(-2px);
         }
 
-        .button-secondary {
-            color: #0071e3;
+        .button-white {
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.7);
+            color: white;
         }
 
-        .button-secondary:hover {
-            text-decoration: underline;
+        .button-white:hover {
+            background: white;
+            color: #111;
         }
 
-        /* SECTIONS */
 
-        section {
-            padding: 100px 22px;
-        }
+        /* =========================
+           VISUAL SECTIONS
+        ========================= */
 
-        .section-title {
-            max-width: 850px;
-            margin: 0 auto 55px;
-            text-align: center;
-        }
+        .visual-section {
 
-        .section-title h2 {
-            font-size: clamp(38px, 6vw, 65px);
-            letter-spacing: -3px;
-            line-height: 1;
-            margin-bottom: 18px;
-        }
+            min-height: 680px;
 
-        .section-title p {
-            font-size: 20px;
-            color: #6e6e73;
-        }
-
-        /* CARDS */
-
-        .grid {
-            max-width: 1100px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            min-height: 430px;
-            border-radius: 28px;
-            padding: 50px 40px;
+            position: relative;
 
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+            align-items: center;
+            justify-content: center;
 
-            background: white;
-            overflow: hidden;
-
-            transition: transform .35s, box-shadow .35s;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 50px rgba(0,0,0,.08);
-        }
-
-        .card.dark {
-            background: #000;
-            color: white;
-        }
-
-        .card.gray {
-            background: #e8e8ed;
-        }
-
-        .card.blue {
-            background: linear-gradient(135deg, #0071e3, #004c99);
-            color: white;
-        }
-
-        .card-icon {
-            font-size: 52px;
-            margin-bottom: auto;
-        }
-
-        .card h3 {
-            font-size: 36px;
-            letter-spacing: -1.5px;
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            font-size: 18px;
-            color: #6e6e73;
-            max-width: 480px;
-        }
-
-        .card.dark p,
-        .card.blue p {
-            color: #d1d1d6;
-        }
-
-        .card-link {
-            margin-top: 22px;
-            color: #0071e3;
-            font-size: 17px;
-            font-weight: 500;
-        }
-
-        .dark .card-link,
-        .blue .card-link {
-            color: #fff;
-        }
-
-        /* TECHNOLOGY */
-
-        .technology {
-            background: #000;
-            color: white;
             text-align: center;
+
+            color: white;
+
+            background-size: cover;
+            background-position: center;
         }
 
-        .technology .section-title p {
-            color: #a1a1a6;
+        .visual-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.15),
+                    rgba(0,0,0,.72)
+                );
         }
 
-        .technology-content {
-            max-width: 1050px;
+        .visual-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: min(850px, 90%);
+
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
+
+        .visual-content h2 {
+
+            font-size: clamp(45px, 7vw, 82px);
+
+            line-height: .98;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 22px;
+        }
+
+        .visual-content p {
+
+            max-width: 650px;
+
             margin: auto;
-        }
 
-        .technology h3 {
-            font-size: clamp(38px, 6vw, 70px);
-            letter-spacing: -3px;
-            line-height: 1;
-            margin-bottom: 25px;
-        }
-
-        .technology-description {
-            max-width: 700px;
-            margin: auto;
-            color: #a1a1a6;
             font-size: 21px;
+
+            line-height: 1.4;
+
+            color: rgba(255,255,255,.88);
         }
+
+        .visual-link {
+
+            display: inline-block;
+
+            margin-top: 28px;
+
+            color: #fff;
+
+            font-size: 17px;
+
+            transition: .2s;
+        }
+
+        .visual-link:hover {
+            opacity: .7;
+        }
+
+
+        /* SOFTWARE */
+
+        .software {
+
+            background-image:
+                url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=2400&q=90");
+        }
+
 
         /* SUPPORT */
 
         .support {
-            background: #fff;
+
+            background-image:
+                url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2400&q=90");
         }
 
-        .support-box {
-            max-width: 1100px;
-            margin: auto;
-
-            border-radius: 30px;
-            padding: 80px 50px;
-
-            text-align: center;
-
-            background: #f5f5f7;
-        }
-
-        .support-box h2 {
-            font-size: clamp(40px, 6vw, 68px);
-            letter-spacing: -3px;
-            line-height: 1;
-            margin-bottom: 22px;
-        }
-
-        .support-box p {
-            max-width: 700px;
-            margin: auto;
-            color: #6e6e73;
-            font-size: 20px;
-        }
 
         /* ACCESSORIES */
 
         .accessories {
-            background: #f5f5f7;
+
+            background-image:
+                url("https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=2400&q=90");
         }
 
-        /* WHY US */
 
-        .why {
-            background: white;
-        }
+        /* =========================
+           DARK BRAND SECTION
+        ========================= */
 
-        .why-grid {
-            max-width: 1100px;
-            margin: auto;
+        .brand {
 
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+            min-height: 580px;
 
-        .why-card {
-            background: #f5f5f7;
-            padding: 40px 30px;
-            border-radius: 25px;
-        }
+            background: #000;
 
-        .why-card h3 {
-            font-size: 25px;
-            margin-bottom: 12px;
-        }
+            color: white;
 
-        .why-card p {
-            color: #6e6e73;
-            font-size: 16px;
-        }
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        /* CTA */
-
-        .cta {
-            background: #f5f5f7;
             text-align: center;
         }
 
-        .cta h2 {
-            font-size: clamp(42px, 7vw, 78px);
-            letter-spacing: -4px;
-            line-height: 1;
+        .brand-content {
+
+            width: min(850px, 90%);
+        }
+
+        .brand-label {
+
+            color: #86868b;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
             margin-bottom: 20px;
         }
 
-        .cta p {
+        .brand h2 {
+
+            font-size: clamp(45px, 7vw, 78px);
+
+            letter-spacing: -4px;
+
+            line-height: 1;
+
+            margin-bottom: 25px;
+        }
+
+        .brand p {
+
+            color: #a1a1a6;
+
+            max-width: 680px;
+
+            margin: auto;
+
+            font-size: 21px;
+
+            line-height: 1.45;
+        }
+
+
+        /* =========================
+           HISTORY
+        ========================= */
+
+        .history {
+
+            min-height: 530px;
+
+            background: #f5f5f7;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .history-content {
+
+            width: min(800px, 90%);
+        }
+
+        .history h2 {
+
+            font-size: clamp(42px, 6vw, 70px);
+
+            letter-spacing: -4px;
+
+            line-height: 1;
+
+            margin-bottom: 25px;
+        }
+
+        .history p {
+
+            max-width: 700px;
+
+            margin: auto;
+
             color: #6e6e73;
+
             font-size: 20px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+
+            min-height: 520px;
+
+            background: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .contact-content {
+
+            width: min(800px, 90%);
+        }
+
+        .contact h2 {
+
+            font-size: clamp(45px, 7vw, 80px);
+
+            letter-spacing: -4px;
+
+            line-height: 1;
+
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+
+            color: #6e6e73;
+
+            font-size: 20px;
+
             margin-bottom: 30px;
         }
 
-        /* FOOTER */
+        .contact-info {
 
-        footer {
-            background: #1d1d1f;
-            color: #f5f5f7;
-            padding: 60px 22px 30px;
+            margin-top: 35px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 35px;
+
+            flex-wrap: wrap;
+
+            color: #6e6e73;
+
+            font-size: 16px;
         }
 
-        .footer-container {
-            max-width: 1100px;
+        .contact-info a:hover {
+            color: #0071e3;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background: #1d1d1f;
+
+            color: white;
+
+            padding: 45px 20px 30px;
+        }
+
+        .footer-inner {
+
+            width: min(1100px, 100%);
+
             margin: auto;
         }
 
-        .footer-top {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 50px;
-            padding-bottom: 50px;
+        .footer-main {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+            padding-bottom: 40px;
         }
 
         .footer-brand h3 {
-            font-size: 25px;
+
+            font-size: 22px;
+
             margin-bottom: 12px;
         }
 
         .footer-brand p {
-            color: #a1a1a6;
+
+            color: #86868b;
+
             max-width: 400px;
+
+            font-size: 14px;
         }
 
         .footer-column h4 {
-            margin-bottom: 18px;
-            font-size: 14px;
+
+            font-size: 13px;
+
+            margin-bottom: 15px;
         }
 
         .footer-column a {
+
             display: block;
-            color: #a1a1a6;
-            font-size: 14px;
-            margin-bottom: 10px;
+
+            color: #86868b;
+
+            font-size: 13px;
+
+            margin-bottom: 9px;
         }
 
         .footer-column a:hover {
@@ -448,23 +573,104 @@
         }
 
         .footer-bottom {
+
             border-top: 1px solid #424245;
-            padding-top: 25px;
+
+            padding-top: 22px;
 
             display: flex;
+
             justify-content: space-between;
+
             gap: 20px;
 
-            color: #86868b;
+            color: #6e6e73;
+
             font-size: 12px;
         }
 
-        /* MOBILE */
 
-        @media (max-width: 700px) {
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            width: 58px;
+            height: 58px;
+
+            border-radius: 50%;
+
+            background: #25d366;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 27px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.22);
+
+            z-index: 999;
+
+            transition: .25s;
+        }
+
+        .whatsapp:hover {
+
+            transform: scale(1.08);
+
+        }
+
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width: 700px) {
 
             .nav-links {
                 display: none;
+            }
+
+            .nav-inner {
+                justify-content: center;
             }
 
             .hero {
@@ -475,205 +681,148 @@
                 letter-spacing: -3px;
             }
 
-            .hero p {
-                font-size: 19px;
+            .visual-section {
+                min-height: 600px;
             }
 
-            .grid,
-            .why-grid {
-                grid-template-columns: 1fr;
+            .visual-content h2 {
+                letter-spacing: -3px;
             }
 
-            .card {
-                min-height: 380px;
+            .visual-content p {
+                font-size: 18px;
             }
 
-            .footer-top {
-                grid-template-columns: 1fr;
-                gap: 35px;
+            .brand {
+                min-height: 500px;
+            }
+
+            .history {
+                min-height: 480px;
+            }
+
+            .contact {
+                min-height: 500px;
+            }
+
+            .footer-main {
+                flex-direction: column;
             }
 
             .footer-bottom {
                 flex-direction: column;
             }
 
-            section {
-                padding: 75px 18px;
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
             }
 
-            .support-box {
-                padding: 60px 25px;
+            .whatsapp {
+                right: 18px;
+                bottom: 18px;
             }
+
         }
+
     </style>
 </head>
 
+
 <body>
 
-<!-- NAVBAR -->
 
-<nav>
-    <div class="nav-container">
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="navbar">
+
+    <div class="nav-inner">
 
         <a href="#" class="logo">
             Robert Software
         </a>
 
         <ul class="nav-links">
-            <li><a href="#soluciones">Soluciones</a></li>
-            <li><a href="#soporte">Soporte</a></li>
-            <li><a href="#accesorios">Accesorios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
+
             <li>
-                <a class="nav-contact"
-                   href="https://wa.me/51945482880"
-                   target="_blank">
+                <a href="#software">
+                    Software
+                </a>
+            </li>
+
+            <li>
+                <a href="#soporte">
+                    Soporte
+                </a>
+            </li>
+
+            <li>
+                <a href="#accesorios">
+                    Accesorios
+                </a>
+            </li>
+
+            <li>
+                <a href="#historia">
+                    Nosotros
+                </a>
+            </li>
+
+            <li>
+                <a href="#contacto" class="nav-button">
                     Contacto
                 </a>
             </li>
+
         </ul>
 
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-<header class="hero">
+<section class="hero">
 
     <div class="hero-content">
 
-        <div class="eyebrow">
-            Tecnología que trabaja para ti.
+        <div class="hero-small">
+            ROBERT SOFTWARE
         </div>
 
         <h1>
-            Todo lo que necesitas.<br>
-            <span>En un solo lugar.</span>
+            Tecnología<br>
+            que trabaja para ti.
         </h1>
 
         <p>
-            Soluciones tecnológicas, software, accesorios y soporte
-            técnico para empresas, estudiantes y hogares.
+            Soluciones tecnológicas, software, accesorios
+            y soporte técnico para empresas, estudiantes y hogares.
         </p>
 
         <div class="buttons">
 
-            <a class="button button-primary"
-               href="https://wa.me/51945482880"
-               target="_blank">
+            <a
+                href="#soluciones"
+                class="button button-blue">
+
+                Descubrir más
+
+            </a>
+
+            <a
+                href="https://wa.me/51945482880"
+                target="_blank"
+                class="button button-white">
+
                 Hablar con nosotros
+
             </a>
-
-            <a class="button button-secondary"
-               href="#soluciones">
-                Descubrir más →
-            </a>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-<!-- SOLUCIONES -->
-
-<section id="soluciones">
-
-    <div class="section-title">
-
-        <h2>
-            Tecnología para<br>
-            cada necesidad.
-        </h2>
-
-        <p>
-            Una experiencia completa para trabajar, estudiar,
-            crear y disfrutar de la tecnología.
-        </p>
-
-    </div>
-
-
-    <div class="grid">
-
-        <div class="card dark">
-
-            <div class="card-icon">⌘</div>
-
-            <div>
-                <h3>Software</h3>
-
-                <p>
-                    Soluciones digitales para productividad,
-                    creatividad, trabajo y estudio.
-                </p>
-
-                <a href="#contacto" class="card-link">
-                    Consultar soluciones →
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="card gray">
-
-            <div class="card-icon">◉</div>
-
-            <div>
-                <h3>Soporte técnico</h3>
-
-                <p>
-                    Asistencia técnica remota para ayudarte
-                    a resolver problemas y mantener tus equipos funcionando.
-                </p>
-
-                <a href="#soporte" class="card-link">
-                    Conocer soporte →
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="card blue">
-
-            <div class="card-icon">⌁</div>
-
-            <div>
-                <h3>Accesorios</h3>
-
-                <p>
-                    Tecnología para complementar tus dispositivos:
-                    energía, conectividad, audio y almacenamiento.
-                </p>
-
-                <a href="#accesorios" class="card-link">
-                    Ver categoría →
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">＋</div>
-
-            <div>
-                <h3>Soluciones digitales</h3>
-
-                <p>
-                    Herramientas y servicios pensados para facilitar
-                    tu día a día tecnológico.
-                </p>
-
-                <a href="#contacto" class="card-link">
-                    Más información →
-                </a>
-            </div>
 
         </div>
 
@@ -682,27 +831,131 @@
 </section>
 
 
-<!-- TECHNOLOGY -->
+<!-- =========================
+     SOFTWARE
+========================= -->
 
-<section class="technology">
+<section
+    id="software"
+    class="visual-section software">
 
-    <div class="technology-content">
+    <div class="visual-content">
 
-        <div class="section-title">
+        <h2>
+            Todo para<br>
+            trabajar mejor.
+        </h2>
 
-            <p>ROBERT SOFTWARE</p>
+        <p>
+            Soluciones de software para productividad,
+            creatividad, trabajo y estudio.
+        </p>
 
+        <a
+            href="https://wa.me/51945482880"
+            target="_blank"
+            class="visual-link">
+
+            Consultar soluciones →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SUPPORT
+========================= -->
+
+<section
+    id="soporte"
+    class="visual-section support">
+
+    <div class="visual-content">
+
+        <h2>
+            Tu tecnología.<br>
+            Siempre funcionando.
+        </h2>
+
+        <p>
+            Soporte técnico remoto para ayudarte a resolver
+            problemas de manera rápida, sencilla y segura.
+        </p>
+
+        <a
+            href="https://wa.me/51945482880"
+            target="_blank"
+            class="visual-link">
+
+            Solicitar soporte →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ACCESSORIES
+========================= -->
+
+<section
+    id="accesorios"
+    class="visual-section accessories">
+
+    <div class="visual-content">
+
+        <h2>
+            Tecnología<br>
+            que va contigo.
+        </h2>
+
+        <p>
+            Accesorios para cargar, conectar, escuchar,
+            almacenar y disfrutar tus dispositivos.
+        </p>
+
+        <a
+            href="https://wa.me/51945482880"
+            target="_blank"
+            class="visual-link">
+
+            Ver accesorios →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BRAND
+========================= -->
+
+<section
+    id="soluciones"
+    class="brand">
+
+    <div class="brand-content">
+
+        <div class="brand-label">
+            ROBERT SOFTWARE
         </div>
 
-        <h3>
-            Tecnología.<br>
-            Simple. Rápida. Cercana.
-        </h3>
+        <h2>
+            Más que tecnología.
+            Una solución.
+        </h2>
 
-        <p class="technology-description">
-            Combinamos soluciones digitales, productos tecnológicos
-            y soporte especializado para ofrecer una experiencia
-            sencilla, confiable y pensada para cada cliente.
+        <p>
+            Reunimos tecnología, software, accesorios y soporte
+            para ofrecer una experiencia sencilla y cercana.
+            Porque la tecnología debe ayudarte, no complicarte.
         </p>
 
     </div>
@@ -710,28 +963,39 @@
 </section>
 
 
-<!-- SUPPORT -->
+<!-- =========================
+     HISTORY
+========================= -->
 
-<section id="soporte" class="support">
+<section
+    id="historia"
+    class="history">
 
-    <div class="support-box">
+    <div class="history-content">
 
         <h2>
-            ¿Tienes un problema?
+            Más de 6 años
+            haciendo tecnología
+            más sencilla.
         </h2>
 
         <p>
-            Nuestro soporte técnico remoto te ayuda a encontrar
-            una solución sin necesidad de trasladar tu equipo.
-            Atención para hogares, estudiantes y empresas.
+            Robert Software nació con una idea sencilla:
+            hacer que la tecnología sea más accesible y práctica.
+            Con el paso de los años hemos evolucionado junto
+            a nuestros clientes, ampliando nuestras soluciones
+            para ofrecer software, tecnología, accesorios
+            y soporte en un solo lugar.
         </p>
 
         <div class="buttons">
 
-            <a class="button button-primary"
-               href="https://wa.me/51945482880"
-               target="_blank">
-                Solicitar soporte
+            <a
+                href="#contacto"
+                class="button button-blue">
+
+                Conócenos
+
             </a>
 
         </div>
@@ -741,110 +1005,68 @@
 </section>
 
 
-<!-- ACCESSORIES -->
+<!-- =========================
+     CONTACT
+========================= -->
 
-<section id="accesorios" class="accessories">
+<section
+    id="contacto"
+    class="contact">
 
-    <div class="section-title">
+    <div class="contact-content">
 
         <h2>
-            Tecnología para acompañarte.
+            ¿Qué necesitas?
         </h2>
 
         <p>
-            Accesorios pensados para mantener tus dispositivos
-            conectados, cargados y listos para funcionar.
+            Escríbenos. Estamos aquí para ayudarte.
         </p>
 
-    </div>
+        <div class="buttons">
 
+            <a
+                href="https://wa.me/51945482880"
+                target="_blank"
+                class="button button-blue">
 
-    <div class="grid">
+                WhatsApp
 
-        <div class="card">
+            </a>
 
-            <div class="card-icon">⚡</div>
+            <a
+                href="mailto:soporte@robert-software.com"
+                class="button button-blue">
 
-            <div>
+                Enviar correo
 
-                <h3>Energía</h3>
-
-                <p>
-                    Soluciones de carga y alimentación
-                    para tus dispositivos.
-                </p>
-
-                <a href="#contacto" class="card-link">
-                    Consultar →
-                </a>
-
-            </div>
+            </a>
 
         </div>
 
+        <div class="contact-info">
 
-        <div class="card">
+            <a
+                href="tel:+51945482880">
 
-            <div class="card-icon">⌁</div>
+                +51 945 482 880
 
-            <div>
+            </a>
 
-                <h3>Conectividad</h3>
+            <a
+                href="mailto:soporte@robert-software.com">
 
-                <p>
-                    Productos para conectar y ampliar
-                    las posibilidades de tus equipos.
-                </p>
+                soporte@robert-software.com
 
-                <a href="#contacto" class="card-link">
-                    Consultar →
-                </a>
+            </a>
 
-            </div>
+            <a
+                href="https://robert-software.com"
+                target="_blank">
 
-        </div>
+                robert-software.com
 
-
-        <div class="card">
-
-            <div class="card-icon">◉</div>
-
-            <div>
-
-                <h3>Audio</h3>
-
-                <p>
-                    Accesorios para disfrutar de tu música,
-                    llamadas y contenido multimedia.
-                </p>
-
-                <a href="#contacto" class="card-link">
-                    Consultar →
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">▣</div>
-
-            <div>
-
-                <h3>Almacenamiento</h3>
-
-                <p>
-                    Soluciones para guardar, transportar
-                    y proteger tu información.
-                </p>
-
-                <a href="#contacto" class="card-link">
-                    Consultar →
-                </a>
-
-            </div>
+            </a>
 
         </div>
 
@@ -853,111 +1075,25 @@
 </section>
 
 
-<!-- WHY ROBERT -->
-
-<section id="nosotros" class="why">
-
-    <div class="section-title">
-
-        <h2>
-            Hecho para ayudarte.
-        </h2>
-
-        <p>
-            Más que productos y servicios,
-            buscamos ofrecer soluciones.
-        </p>
-
-    </div>
-
-
-    <div class="why-grid">
-
-        <div class="why-card">
-
-            <h3>Atención personalizada</h3>
-
-            <p>
-                Te orientamos para encontrar la solución
-                adecuada según tus necesidades.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <h3>Soporte remoto</h3>
-
-            <p>
-                Asistencia técnica de manera rápida y
-                práctica, estés donde estés.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <h3>Soluciones completas</h3>
-
-            <p>
-                Software, tecnología y accesorios
-                reunidos en un mismo lugar.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section id="contacto" class="cta">
-
-    <h2>
-        ¿Qué necesitas?
-    </h2>
-
-    <p>
-        Escríbenos y encontraremos una solución para ti.
-    </p>
-
-    <div class="buttons">
-
-        <a class="button button-primary"
-           href="https://wa.me/51945482880"
-           target="_blank">
-            WhatsApp
-        </a>
-
-        <a class="button button-secondary"
-           href="mailto:soporte@robert-software.com">
-            Enviar correo →
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <div class="footer-container">
+    <div class="footer-inner">
 
-        <div class="footer-top">
+        <div class="footer-main">
 
             <div class="footer-brand">
 
-                <h3>Robert Software</h3>
+                <h3>
+                    Robert Software
+                </h3>
 
                 <p>
-                    Tecnología, software, accesorios y soporte
-                    técnico para empresas, estudiantes y hogares.
+                    Tecnología, software, accesorios
+                    y soporte técnico remoto.
                 </p>
 
             </div>
@@ -965,32 +1101,55 @@
 
             <div class="footer-column">
 
-                <h4>Explorar</h4>
+                <h4>
+                    Explorar
+                </h4>
 
-                <a href="#soluciones">Soluciones</a>
-                <a href="#soporte">Soporte técnico</a>
-                <a href="#accesorios">Accesorios</a>
-                <a href="#nosotros">Nosotros</a>
+                <a href="#software">
+                    Software
+                </a>
+
+                <a href="#soporte">
+                    Soporte técnico
+                </a>
+
+                <a href="#accesorios">
+                    Accesorios
+                </a>
+
+                <a href="#historia">
+                    Nosotros
+                </a>
 
             </div>
 
 
             <div class="footer-column">
 
-                <h4>Contacto</h4>
+                <h4>
+                    Contacto
+                </h4>
 
-                <a href="https://wa.me/51945482880"
-                   target="_blank">
+                <a
+                    href="https://wa.me/51945482880"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
+                <a
+                    href="mailto:soporte@robert-software.com">
+
+                    Correo
+
+                </a>
+
+                <a
+                    href="tel:+51945482880">
+
                     +51 945 482 880
-                </a>
 
-                <a href="mailto:soporte@robert-software.com">
-                    soporte@robert-software.com
-                </a>
-
-                <a href="https://robert-software.com"
-                   target="_blank">
-                    robert-software.com
                 </a>
 
             </div>
@@ -1005,7 +1164,7 @@
             </span>
 
             <span>
-                Tecnología • Software • Soporte • Accesorios
+                Lima, Perú
             </span>
 
         </div>
@@ -1013,6 +1172,21 @@
     </div>
 
 </footer>
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/51945482880"
+    target="_blank"
+    aria-label="Contactar por WhatsApp">
+
+    ☎
+
+</a>
 
 
 </body>
