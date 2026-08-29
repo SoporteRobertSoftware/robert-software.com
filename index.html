@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Robert Software | Tecnología, Software y Soporte Técnico</title>
+
+    <meta name="description" content="Robert Software - Software, licencias, soporte técnico remoto y accesorios tecnológicos. Soluciones para empresas, estudiantes y hogares.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #1d1d1f;
+        }
+
+        /* NAVBAR */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #111827;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: linear-gradient(135deg, #111827, #1e3a8a);
+            color: white;
+            padding: 100px 25px;
+        }
+
+        .hero-content {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            max-width: 700px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 19px;
+            line-height: 1.6;
+            color: #dbeafe;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #111827;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 80px 25px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+            font-size: 17px;
+        }
+
+        /* SUPPORT */
+
+        .support {
+            background: white;
+        }
+
+        .support-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 18px;
+            padding: 45px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .support-box h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .support-box p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .support-list {
+            list-style: none;
+        }
+
+        .support-list li {
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .support-card {
+            background: #111827;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .support-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .support-card p {
+            color: #d1d5db;
+        }
+
+        /* PRODUCTS */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .product {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e5e7eb;
+            transition: 0.2s;
+        }
+
+        .product:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .product-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .product h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* SOFTWARE */
+
+        .software {
+            background: #f9fafb;
+        }
+
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .software-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        /* ACCESSORIES */
+
+        .accessories {
+            background: white;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            color: #d1d5db;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            background: #f5f7fa;
+        }
+
+        .contact h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #6b7280;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b1120;
+            color: #9ca3af;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* WHATSAPP */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            background: #25d366;
+            color: white;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 2000;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 70px 20px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .support-box {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .software-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+    <div class="navbar">
+
+        <div class="logo">
+            Robert<span> Software</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#soporte">Soporte</a>
+            <a href="#software">Software</a>
+            <a href="#accesorios">Accesorios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <h1>
+            Tecnología y soluciones para
+            <span>todos.</span>
+        </h1>
+
+        <p>
+            Software, licencias, soporte técnico remoto y accesorios
+            tecnológicos para empresas, estudiantes y hogares.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn btn-primary"
+               href="https://wa.me/TUNUMERO"
+               target="_blank">
+                Solicitar soporte
+            </a>
+
+            <a class="btn btn-secondary"
+               href="#accesorios">
+                Ver accesorios
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOPORTE -->
+
+<section class="support" id="soporte">
+
+    <div class="container">
+
+        <div class="support-box">
+
+            <div>
+
+                <h2>Soporte Técnico Remoto</h2>
+
+                <p>
+                    ¿Tienes problemas con tu computadora, programas,
+                    Windows o configuración? Podemos ayudarte de forma
+                    remota sin necesidad de llevar tu equipo a un local.
+                </p>
+
+                <ul class="support-list">
+                    <li>✓ Instalación y configuración de programas</li>
+                    <li>✓ Solución de errores de software</li>
+                    <li>✓ Optimización de equipos</li>
+                    <li>✓ Configuración de Windows</li>
+                    <li>✓ Asistencia remota</li>
+                </ul>
+
+            </div>
+
+            <div class="support-card">
+
+                <h3>¿Necesitas ayuda?</h3>
+
+                <p>
+                    Escríbenos por WhatsApp y cuéntanos qué problema
+                    presenta tu equipo.
+                </p>
+
+                <br>
+
+                <a class="btn btn-primary"
+                   href="https://wa.me/TUNUMERO"
+                   target="_blank">
+                    Contactar ahora
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOFTWARE -->
+
+<section class="software" id="software">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Software y Licencias</h2>
+
+            <p>
+                Soluciones de software para trabajo, estudio y diseño.
+            </p>
+
+        </div>
+
+
+        <div class="software-grid">
+
+            <div class="software-item">
+                Microsoft Office
+            </div>
+
+            <div class="software-item">
+                Windows
+            </div>
+
+            <div class="software-item">
+                Adobe
+            </div>
+
+            <div class="software-item">
+                Autodesk
+            </div>
+
+            <div class="software-item">
+                Antivirus
+            </div>
+
+            <div class="software-item">
+                Canva
+            </div>
+
+            <div class="software-item">
+                Diseño
+            </div>
+
+            <div class="software-item">
+                Edición de video
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ACCESORIOS -->
+
+<section class="accessories" id="accesorios">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Accesorios Tecnológicos</h2>
+
+            <p>
+                Productos nuevos y seleccionados para tus dispositivos.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+            <div class="product">
+
+                <div class="product-icon">⚡</div>
+
+                <h3>Cargadores CUKTECH</h3>
+
+                <p>
+                    Cargadores de alta potencia con tecnología GaN,
+                    carga rápida y protección para tus dispositivos.
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-icon">🎧</div>
+
+                <h3>Audífonos</h3>
+
+                <p>
+                    Audífonos y accesorios de audio para disfrutar
+                    de tu música, llamadas y entretenimiento.
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-icon">🔌</div>
+
+                <h3>Cables</h3>
+
+                <p>
+                    Cables de carga y conexión para celulares,
+                    tablets y otros dispositivos.
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-icon">🔋</div>
+
+                <h3>Carga y energía</h3>
+
+                <p>
+                    Soluciones para mantener tus dispositivos
+                    siempre cargados y listos.
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-icon">📱</div>
+
+                <h3>Accesorios móviles</h3>
+
+                <p>
+                    Productos seleccionados para celulares,
+                    tablets y dispositivos tecnológicos.
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-icon">💻</div>
+
+                <h3>Accesorios tecnológicos</h3>
+
+                <p>
+                    Complementos útiles para tu computadora
+                    y equipos tecnológicos.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NOSOTROS -->
+
+<section class="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Robert Software</h2>
+
+        </div>
+
+        <p>
+            Somos una empresa dedicada a brindar soluciones tecnológicas,
+            ofreciendo software, licencias, soporte técnico remoto y
+            accesorios para dispositivos. Nuestro objetivo es hacer que
+            la tecnología sea más accesible, práctica y sencilla para
+            nuestros clientes.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section class="contact" id="contacto">
+
+    <div class="container">
+
+        <h2>¿Necesitas una solución?</h2>
+
+        <p>
+            Escríbenos y te ayudaremos a encontrar la mejor opción.
+        </p>
+
+        <a class="btn btn-primary"
+           href="https://wa.me/TUNUMERO"
+           target="_blank">
+            Hablar por WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 <strong>Robert Software</strong>.
+        Todos los derechos reservados.
+    </p>
+
+    <p style="margin-top: 8px;">
+        Tecnología · Software · Accesorios · Soporte Técnico Remoto
+    </p>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+   href="https://wa.me/945482880"
+   target="_blank"
+   title="Contactar por WhatsApp">
+
+    ☎
+
+</a>
+
+</body>
+</html>
