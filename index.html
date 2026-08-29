@@ -11,6 +11,15 @@
 <meta name="theme-color" content="#f5f5f7">
 
 <style>
+
+@font-face{
+  font-family:"Dom Casual";
+  src:url("fuentes/DomCasualD.ttf") format("truetype");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
 :root{
   --bg:#f5f5f7;
   --surface:#fff;
@@ -316,12 +325,11 @@ button{
   width:100%;
   height:100%;
   object-fit:contain;
-  transition:
-    transform .55s cubic-bezier(.2,.8,.2,1);
+  transition:transform .5s ease;
 }
 
 .product-card:hover .product-image img{
-  transform:scale(1.08) translateY(-8px);
+  transform:scale(1.07) translateY(-7px);
 }
 
 .product-info{
@@ -373,10 +381,10 @@ button{
   margin-top:18px;
 }
 
-/* CINTA DE TECNOLOGÍAS */
+/* CINTA */
 
 .trust-section{
-  padding:30px 20px;
+  padding:34px 20px;
   background:var(--surface);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
@@ -388,7 +396,7 @@ button{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:38px;
+  gap:42px;
   flex-wrap:wrap;
 }
 
@@ -404,33 +412,34 @@ button{
   justify-content:center;
   gap:10px;
   color:var(--text);
-  font-size:25px;
-  font-weight:500;
-  letter-spacing:-.7px;
-  min-height:45px;
+  font-size:22px;
+  letter-spacing:-.5px;
+  min-height:48px;
 }
 
-.trust-brand img{
-  width:36px;
-  height:36px;
+.anydesk-logo{
+  width:38px;
+  height:38px;
   object-fit:contain;
+  display:block;
 }
 
-.anydesk-brand span{
-  font-weight:500;
+.anydesk-name{
+  font-weight:600;
   letter-spacing:-1px;
 }
 
-.cuktech-brand span{
+.cuktech-name{
   font-weight:500;
-  letter-spacing:-1px;
+  letter-spacing:-1.2px;
 }
 
-.solzze-brand span{
-  font-family:"Dom Casual","Comic Sans MS",cursive;
-  font-size:32px;
+.solzze-name{
+  font-family:"Dom Casual",cursive;
   font-weight:400;
-  letter-spacing:-1px;
+  font-size:31px;
+  line-height:1;
+  letter-spacing:.2px;
 }
 
 .trust-divider{
@@ -769,8 +778,6 @@ footer{
   height:24px;
 }
 
-/* ANIMACIONES */
-
 @keyframes fadeUp{
   from{
     opacity:0;
@@ -843,11 +850,16 @@ footer{
   }
 
   .trust-brand{
-    min-height:40px;
+    min-height:44px;
   }
 
-  .solzze-brand span{
-    font-size:30px;
+  .anydesk-logo{
+    width:34px;
+    height:34px;
+  }
+
+  .solzze-name{
+    font-size:29px;
   }
 
   .footer-bottom{
@@ -855,6 +867,7 @@ footer{
     gap:9px;
   }
 }
+
 </style>
 
 </head>
@@ -877,6 +890,7 @@ footer{
 </ul>
 
 <div class="nav-actions">
+
   <button
     class="theme-toggle"
     id="themeToggle"
@@ -894,7 +908,9 @@ footer{
       <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
 
     </svg>
+
   </button>
+
 </div>
 
   </div>
@@ -965,12 +981,12 @@ footer{
 </div>
 
 <h2>
-  Tecnología que aporta.
+  Tecnología que te acompaña.
 </h2>
 
 <p>
-  Accesorios seleccionados por sus características,
-  rendimiento y utilidad para el trabajo y el día a día.
+  Productos seleccionados por sus características, rendimiento
+  y utilidad para el trabajo, estudio y uso diario.
 </p>
 
   </div>
@@ -1000,8 +1016,8 @@ footer{
     </h3>
 
     <p>
-      Power bank de alta capacidad diseñado para ofrecer
-      energía portátil y carga rápida cuando más la necesitas.
+      Power Bank de alta capacidad diseñado para ofrecer
+      carga rápida y autonomía portátil cuando más la necesitas.
     </p>
 
     <div class="features">
@@ -1026,6 +1042,7 @@ footer{
 
 </article>
 
+
 <!-- CARGADOR -->
 
 <article class="product-card">
@@ -1049,8 +1066,8 @@ footer{
     </h3>
 
     <p>
-      Cargador GaN compacto con carga rápida y múltiples
-      protocolos para una carga eficiente y segura.
+      Cargador GaN compacto con carga rápida y protocolos
+      diseñados para ofrecer potencia y eficiencia.
     </p>
 
     <div class="features">
@@ -1076,6 +1093,7 @@ footer{
 
 </article>
 
+
 <!-- CABLE -->
 
 <article class="product-card">
@@ -1099,7 +1117,7 @@ footer{
     </h3>
 
     <p>
-      Cable USB-C de alta potencia con pantalla OLED integrada
+      Cable USB-C de alto rendimiento con pantalla OLED integrada
       para visualizar en tiempo real la potencia de carga.
     </p>
 
@@ -1109,6 +1127,7 @@ footer{
       <span class="feature">240W</span>
       <span class="feature">6A</span>
       <span class="feature">1.5 m</span>
+      <span class="feature">Magnético</span>
 
     </div>
 
@@ -1125,7 +1144,8 @@ footer{
 
 </article>
 
-<!-- AUDÍFONOS -->
+
+<!-- AUDIFONOS -->
 
 <article class="product-card">
 
@@ -1148,8 +1168,8 @@ footer{
     </h3>
 
     <p>
-      Audífonos inalámbricos con Bluetooth 5.4,
-      autonomía prolongada y conexión USB-C para carga.
+      Audífonos inalámbricos con Bluetooth 5.4, autonomía
+      prolongada y conexión USB-C para carga.
     </p>
 
     <div class="features">
@@ -1185,50 +1205,58 @@ footer{
   <div class="trust-inner">
 
 <div class="trust-text">
-  Soluciones y tecnología para trabajar mejor
+  Tecnología y soluciones con marcas seleccionadas
 </div>
 
 <div class="trust-divider"></div>
 
+
 <!-- ANYDESK -->
 
-<div class="trust-brand anydesk-brand">
+<div class="trust-brand">
 
   <img
     src="imagenes/anydesk.png"
-    alt="AnyDesk">
+    alt="AnyDesk"
+    class="anydesk-logo">
 
-  <span>
+  <span class="anydesk-name">
     AnyDesk
   </span>
 
 </div>
 
+
 <div class="trust-divider"></div>
+
 
 <!-- CUKTECH -->
 
-<div class="trust-brand cuktech-brand">
+<div class="trust-brand">
 
-  <span>
+  <span class="cuktech-name">
     CUKTECH
   </span>
 
 </div>
 
+
 <div class="trust-divider"></div>
+
 
 <!-- SOLZZE -->
 
-<div class="trust-brand solzze-brand">
+<div class="trust-brand">
 
-  <span>
+  <span class="solzze-name">
     SOLZZE
   </span>
 
 </div>
 
+
 <div class="trust-divider"></div>
+
 
 <div class="trust-text">
   Soporte técnico remoto
@@ -1288,6 +1316,7 @@ footer{
 
 </article>
 
+
 <article
   class="visual-card support"
   id="soporte">
@@ -1301,7 +1330,8 @@ footer{
 
     <p>
       Asistencia técnica remota para resolver incidencias,
-      configurar equipos y ayudarte a mantener tus sistemas funcionando.
+      configurar equipos y ayudarte a mantener tu entorno
+      tecnológico funcionando.
     </p>
 
     <a
@@ -1328,9 +1358,9 @@ footer{
   </h2>
 
   <p>
-    Desarrollamos soluciones orientadas principalmente a empresas
-    y profesionales, además de ofrecer alternativas para estudiantes
-    y hogares. Atención cercana, soporte remoto y soluciones prácticas.
+    Desarrollamos soluciones para empresas y profesionales
+    que necesitan apoyo tecnológico, software y soporte TI,
+    además de opciones para estudiantes y hogares.
   </p>
 
   <a
@@ -1364,10 +1394,10 @@ footer{
 
 <p>
   Trabajamos para acercar soluciones tecnológicas de manera
-  sencilla, profesional y accesible. Nuestro enfoque está orientado
-  especialmente a empresas y profesionales que necesitan resolver
-  sus necesidades de tecnología, software y soporte TI de forma
-  práctica y eficiente.
+  sencilla, profesional y accesible. Nuestro enfoque está
+  orientado especialmente a empresas y profesionales que
+  necesitan resolver sus necesidades de TI de forma práctica,
+  además de brindar soluciones para estudiantes y hogares.
 </p>
 
   </div>
@@ -1390,35 +1420,39 @@ footer{
 </h2>
 
 <p>
-  Robert Software nació a partir de una idea sencilla:
-  encontrar una manera más práctica de ayudar a las personas
-  con sus necesidades tecnológicas. Al evaluar cómo podíamos
-  brindar una atención más cómoda y eficiente, identificamos
-  que muchas incidencias podían solucionarse de forma remota,
-  evitando que el cliente tuviera que trasladarse o llevar
-  su equipo a un establecimiento.
+  Robert Software nació hace más de seis años a partir de una
+  idea sencilla: encontrar una manera más práctica de ayudar
+  a las personas con sus necesidades tecnológicas.
+</p>
+
+<p>
+  Al evaluar cómo podíamos mejorar la experiencia de nuestros
+  clientes, identificamos que muchas incidencias podían
+  solucionarse de forma remota, evitando desplazamientos,
+  esperas y la necesidad de llevar un equipo físicamente
+  a un establecimiento.
 </p>
 
 <p>
   Así comenzamos a desarrollar nuestro enfoque de soporte
-  técnico remoto, permitiendo atender problemas, configuraciones
-  e incidencias directamente a distancia. Este modelo nos permitió
-  acercarnos a nuestros clientes y ofrecer una atención más
-  rápida, cómoda y accesible.
+  técnico remoto, utilizando herramientas que nos permiten
+  brindar asistencia de manera rápida y eficiente.
 </p>
 
 <p>
-  Con el tiempo, evolucionamos hacia un enfoque más amplio:
-  ofrecer soluciones tecnológicas para empresas y profesionales,
-  incluyendo software, herramientas de productividad, soporte TI
-  y tecnología para sus operaciones diarias.
+  Con el tiempo, este modelo evolucionó hacia una propuesta
+  tecnológica más completa. Hoy trabajamos también con
+  empresas y profesionales que necesitan soluciones de TI,
+  software, configuración, asistencia técnica y herramientas
+  para desarrollar sus actividades de manera más eficiente.
 </p>
 
 <p>
-  Hoy continuamos incorporando nuevos productos y soluciones,
-  incluyendo accesorios tecnológicos, manteniendo la misma visión
-  con la que comenzamos: utilizar la tecnología para resolver
-  necesidades reales de forma sencilla, profesional y cercana.
+  A esta propuesta incorporamos productos y accesorios
+  tecnológicos seleccionados por su utilidad y características,
+  manteniendo siempre nuestra visión inicial: hacer que la
+  tecnología sea más sencilla, accesible y útil para nuestros
+  clientes.
 </p>
 
   </div>
@@ -1447,7 +1481,9 @@ footer{
 
 </div>
 
+
 <div class="contact-cards">
+
 
   <!-- WHATSAPP -->
 
@@ -1485,6 +1521,7 @@ footer{
     </span>
 
   </a>
+
 
   <!-- CORREO -->
 
@@ -1527,6 +1564,7 @@ footer{
     </span>
 
   </a>
+
 
   <!-- WEB -->
 
@@ -1583,6 +1621,7 @@ footer{
 
 <div class="footer-main">
 
+
   <div class="footer-brand">
 
     <h3>
@@ -1595,6 +1634,7 @@ footer{
     </p>
 
   </div>
+
 
   <div class="footer-column">
 
@@ -1624,6 +1664,7 @@ footer{
 
   </div>
 
+
   <div class="footer-column">
 
     <h4>
@@ -1652,6 +1693,7 @@ footer{
   </div>
 
 </div>
+
 
 <div class="footer-bottom">
 
@@ -1721,7 +1763,6 @@ function setTheme(theme){
     :
 
     '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>';
-
 }
 
 const savedTheme =
