@@ -11,6 +11,7 @@
 <meta name="theme-color" content="#f5f5f7">
 
 <style>
+
 :root{
   --bg:#f5f5f7;
   --surface:#fff;
@@ -294,12 +295,12 @@ button{
   overflow:hidden;
   border:1px solid var(--line);
   box-shadow:var(--shadow);
-  transition:transform .35s ease,box-shadow .35s ease;
+  transition:transform .3s,box-shadow .3s;
 }
 
 .product-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 28px 70px rgba(0,0,0,.14);
+  transform:translateY(-5px);
+  box-shadow:0 25px 65px rgba(0,0,0,.12);
 }
 
 .product-image{
@@ -316,11 +317,11 @@ button{
   width:100%;
   height:100%;
   object-fit:contain;
-  transition:transform .5s ease;
+  transition:transform .45s ease;
 }
 
 .product-card:hover .product-image img{
-  transform:scale(1.07);
+  transform:scale(1.08);
 }
 
 .product-info{
@@ -372,7 +373,7 @@ button{
   margin-top:18px;
 }
 
-/* CINTA */
+/* CINTA DE TECNOLOGÍAS */
 
 .trust-section{
   padding:32px 20px;
@@ -382,7 +383,7 @@ button{
 }
 
 .trust-inner{
-  max-width:950px;
+  max-width:1050px;
   margin:auto;
   display:flex;
   align-items:center;
@@ -395,19 +396,20 @@ button{
   color:var(--muted);
   font-size:13px;
   text-align:center;
+  white-space:nowrap;
 }
 
 .trust-brand{
-  width:110px;
-  height:110px;
+  width:220px;
+  height:100px;
   display:flex;
   align-items:center;
   justify-content:center;
 }
 
 .trust-brand img{
-  width:100px;
-  height:100px;
+  width:210px;
+  height:95px;
   object-fit:contain;
   display:block;
 }
@@ -443,7 +445,7 @@ button{
 }
 
 .visual-card:hover{
-  transform:translateY(-7px);
+  transform:translateY(-5px);
 }
 
 .visual-card:before{
@@ -629,7 +631,7 @@ button{
 }
 
 .contact-card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-4px);
 }
 
 .icon{
@@ -753,11 +755,14 @@ footer{
   height:24px;
 }
 
+/* ANIMACIÓN */
+
 @keyframes fadeUp{
   from{
     opacity:0;
     transform:translateY(24px);
   }
+
   to{
     opacity:1;
     transform:none;
@@ -817,21 +822,25 @@ footer{
   }
 
   .trust-inner{
-    gap:22px;
+    gap:18px;
   }
 
   .trust-brand{
-    width:100px;
-    height:100px;
+    width:190px;
+    height:90px;
   }
 
   .trust-brand img{
-    width:90px;
-    height:90px;
+    width:185px;
+    height:85px;
   }
 
   .trust-divider{
     display:none;
+  }
+
+  .trust-text{
+    white-space:normal;
   }
 
   .footer-bottom{
@@ -839,6 +848,7 @@ footer{
     gap:9px;
   }
 }
+
 </style>
 
 </head>
@@ -848,39 +858,50 @@ footer{
 <!-- NAVBAR -->
 
 <nav class="navbar">
+
   <div class="nav-inner">
 
-```
-<a href="#" class="logo">Robert Software</a>
+<a href="#" class="logo">
+  Robert Software
+</a>
 
 <ul class="nav-links">
+
   <li><a href="#productos">Productos</a></li>
   <li><a href="#servicios">Servicios</a></li>
   <li><a href="#nosotros">Nosotros</a></li>
   <li><a href="#historia">Historia</a></li>
   <li><a href="#contacto">Contacto</a></li>
+
 </ul>
 
 <div class="nav-actions">
+
   <button
     class="theme-toggle"
     id="themeToggle"
     aria-label="Cambiar modo de color"
     title="Cambiar modo">
 
-    <svg id="themeIcon" viewBox="0 0 24 24"
+    <svg
+      id="themeIcon"
+      viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       stroke-width="1.8">
 
       <circle cx="12" cy="12" r="4"></circle>
+
       <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
 
     </svg>
+
   </button>
+
 </div>
 
   </div>
+
 </nav>
 
 <!-- HERO -->
@@ -904,7 +925,9 @@ footer{
 
   <div class="hero-content">
 
-<div class="eyebrow">ROBERT SOFTWARE</div>
+<div class="eyebrow">
+  ROBERT SOFTWARE
+</div>
 
 <h1>
   Tecnología<br>
@@ -918,8 +941,12 @@ footer{
 
 <div class="buttons">
 
-  <a href="#productos" class="button button-blue">
+  <a
+    href="#productos"
+    class="button button-blue">
+
     Ver soluciones
+
   </a>
 
   <a
@@ -948,12 +975,12 @@ footer{
 </div>
 
 <h2>
-  Tecnología seleccionada.
+  Diseñados para acompañarte.
 </h2>
 
 <p>
-  Accesorios pensados para ofrecer rendimiento, conectividad,
-  carga rápida y practicidad en el trabajo y uso diario.
+  Tecnología seleccionada para mejorar la carga, conectividad,
+  movilidad y experiencia de uso de tus dispositivos.
 </p>
 
   </div>
@@ -983,8 +1010,9 @@ footer{
     </h3>
 
     <p>
-      Power Bank de alta capacidad diseñado para mantener tus
-      dispositivos cargados cuando necesitas autonomía adicional.
+      Power bank de alta capacidad diseñado para ofrecer
+      carga rápida y energía portátil para smartphones,
+      tablets y otros dispositivos.
     </p>
 
     <div class="features">
@@ -1009,6 +1037,7 @@ footer{
 
 </article>
 
+
 <!-- CARGADOR -->
 
 <article class="product-card">
@@ -1032,8 +1061,8 @@ footer{
     </h3>
 
     <p>
-      Cargador GaN compacto con carga rápida y múltiples
-      protocolos para smartphones, tablets y otros dispositivos.
+      Cargador GaN compacto con carga rápida y tecnologías
+      PD 3.0 y PPS para una carga eficiente y estable.
     </p>
 
     <div class="features">
@@ -1059,6 +1088,7 @@ footer{
 
 </article>
 
+
 <!-- CABLE -->
 
 <article class="product-card">
@@ -1083,7 +1113,8 @@ footer{
 
     <p>
       Cable USB-C de alta potencia con pantalla OLED integrada
-      para visualizar información de carga en tiempo real.
+      para visualizar en tiempo real la potencia de carga,
+      además de ofrecer conexión estable y carga rápida.
     </p>
 
     <div class="features">
@@ -1109,7 +1140,8 @@ footer{
 
 </article>
 
-<!-- AUDIFONOS -->
+
+<!-- AUDÍFONOS -->
 
 <article class="product-card">
 
@@ -1132,8 +1164,9 @@ footer{
     </h3>
 
     <p>
-      Audífonos inalámbricos compactos con Bluetooth 5.4,
-      autonomía prolongada y conexión USB-C para carga.
+      Audífonos inalámbricos con Bluetooth 5.4, autonomía
+      prolongada y conexión USB-C para música, llamadas
+      y entretenimiento.
     </p>
 
     <div class="features">
@@ -1169,10 +1202,13 @@ footer{
   <div class="trust-inner">
 
 <div class="trust-text">
-  Soluciones y tecnología para trabajar mejor
+  Trabajamos con tecnología de confianza
 </div>
 
 <div class="trust-divider"></div>
+
+
+<!-- LOGO ANYDESK -->
 
 <div class="trust-brand">
 
@@ -1182,7 +1218,11 @@ footer{
 
 </div>
 
+
 <div class="trust-divider"></div>
+
+
+<!-- LOGO CUKTECH -->
 
 <div class="trust-brand">
 
@@ -1192,10 +1232,11 @@ footer{
 
 </div>
 
+
 <div class="trust-divider"></div>
 
 <div class="trust-text">
-  Soporte técnico remoto
+  Soporte remoto y tecnología
 </div>
 
   </div>
@@ -1217,9 +1258,8 @@ footer{
 </h2>
 
 <p>
-  Ofrecemos soluciones tecnológicas orientadas principalmente
-  a empresas y profesionales, además de atención para estudiantes
-  y hogares.
+  Desde soluciones de software hasta soporte técnico remoto,
+  ayudamos a que la tecnología sea una herramienta y no un problema.
 </p>
 
   </div>
@@ -1236,8 +1276,8 @@ footer{
     </h3>
 
     <p>
-      Software y herramientas tecnológicas para productividad,
-      diseño, ingeniería, creatividad, trabajo y estudio.
+      Herramientas para productividad, diseño, ingeniería,
+      creatividad, trabajo y estudio.
     </p>
 
     <a
@@ -1253,6 +1293,7 @@ footer{
 
 </article>
 
+
 <article
   class="visual-card support"
   id="soporte">
@@ -1265,9 +1306,9 @@ footer{
     </h3>
 
     <p>
-      Asistencia técnica remota para empresas y usuarios,
-      ayudando a resolver incidencias sin necesidad de trasladar
-      los equipos o interrumpir innecesariamente el trabajo.
+      Asistencia técnica remota para resolver incidencias,
+      configurar equipos y ayudarte a mantener tus sistemas
+      funcionando.
     </p>
 
     <a
@@ -1294,9 +1335,10 @@ footer{
   </h2>
 
   <p>
-    Desarrollamos soluciones para empresas y profesionales
-    que necesitan apoyo en tecnología y TI, además de ofrecer
-    productos y servicios para estudiantes y hogares.
+    Desarrollamos soluciones orientadas principalmente a empresas
+    y profesionales que necesitan soporte TI, software y atención
+    tecnológica eficiente. También ofrecemos soluciones para
+    estudiantes y hogares.
   </p>
 
   <a
@@ -1329,11 +1371,10 @@ footer{
 </h2>
 
 <p>
-  Ayudamos a empresas, profesionales y usuarios a resolver
-  sus necesidades tecnológicas mediante software, soporte
-  técnico remoto y soluciones de TI. Buscamos ofrecer una
-  atención clara, profesional y práctica, adaptada a cada
-  necesidad.
+  Ayudamos a empresas y profesionales a resolver sus necesidades
+  tecnológicas mediante soporte TI remoto, software y soluciones
+  digitales. Complementamos nuestra propuesta con tecnología y
+  accesorios seleccionados para el trabajo, estudio y uso diario.
 </p>
 
   </div>
@@ -1356,36 +1397,33 @@ footer{
 </h2>
 
 <p>
-  Robert Software nació a partir de una idea sencilla:
-  encontrar una manera más práctica de ayudar a las personas
-  con sus necesidades tecnológicas. Con el tiempo entendimos
-  que muchos problemas podían solucionarse de manera remota,
-  evitando que nuestros clientes tuvieran que salir de casa,
-  trasladar sus equipos o esperar una atención presencial.
+  Robert Software comenzó hace más de seis años a partir de una
+  idea sencilla: encontrar una forma más práctica de ayudar a
+  las personas con sus necesidades tecnológicas. Evaluamos cómo
+  podíamos ofrecer asistencia sin que nuestros clientes tuvieran
+  que trasladarse, llevar sus equipos a un establecimiento o
+  interrumpir sus actividades.
 </p>
 
 <p>
-  Así comenzamos a desarrollar nuestro enfoque de soporte
-  técnico remoto, buscando ofrecer asistencia rápida,
-  accesible y eficiente. Esta forma de trabajar nos permitió
-  atender diferentes necesidades tecnológicas y acompañar a
-  nuestros clientes directamente desde sus equipos.
+  Así nació nuestro enfoque de soporte técnico remoto, permitiendo
+  atender incidencias, configuraciones y necesidades tecnológicas
+  directamente a distancia, de una manera rápida y práctica.
 </p>
 
 <p>
-  Con el crecimiento de nuestra experiencia, ampliamos
-  nuestro enfoque hacia soluciones de TI para empresas y
-  profesionales, incorporando software, herramientas
-  tecnológicas, soporte remoto y productos que ayudan a
-  mantener un entorno de trabajo más eficiente.
+  Con el tiempo, nuestra experiencia nos llevó a ampliar el enfoque
+  hacia soluciones tecnológicas para empresas y profesionales,
+  ofreciendo herramientas de software, soporte TI y asistencia
+  remota para facilitar sus actividades y resolver sus necesidades
+  tecnológicas de forma más eficiente.
 </p>
 
 <p>
-  Hoy Robert Software continúa evolucionando, incorporando
-  nuevas tecnologías y accesorios como parte de una propuesta
-  cada vez más completa, manteniendo nuestro objetivo inicial:
-  brindar soluciones tecnológicas prácticas, profesionales
-  y accesibles.
+  Hoy seguimos evolucionando e incorporando nuevas soluciones,
+  software, accesorios y tecnología, manteniendo el mismo objetivo:
+  hacer que la tecnología sea más accesible, práctica y útil para
+  nuestros clientes.
 </p>
 
   </div>
@@ -1414,7 +1452,9 @@ footer{
 
 </div>
 
+
 <div class="contact-cards">
+
 
   <!-- WHATSAPP -->
 
@@ -1452,6 +1492,7 @@ footer{
     </span>
 
   </a>
+
 
   <!-- CORREO -->
 
@@ -1494,6 +1535,7 @@ footer{
     </span>
 
   </a>
+
 
   <!-- WEB -->
 
@@ -1550,6 +1592,7 @@ footer{
 
 <div class="footer-main">
 
+
   <div class="footer-brand">
 
     <h3>
@@ -1562,6 +1605,7 @@ footer{
     </p>
 
   </div>
+
 
   <div class="footer-column">
 
@@ -1591,6 +1635,7 @@ footer{
 
   </div>
 
+
   <div class="footer-column">
 
     <h4>
@@ -1619,6 +1664,7 @@ footer{
   </div>
 
 </div>
+
 
 <div class="footer-bottom">
 
@@ -1688,6 +1734,7 @@ function setTheme(theme){
     :
 
     '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>';
+
 }
 
 const savedTheme =
