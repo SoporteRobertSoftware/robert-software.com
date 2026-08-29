@@ -10,14 +10,7 @@
 <meta name="description" content="Robert Software ofrece soluciones tecnológicas, software, accesorios y soporte técnico remoto para empresas, profesionales, estudiantes y hogares.">
 <meta name="theme-color" content="#f5f5f7">
 
-<!-- Tipografía para SOLZZE -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
-
 :root{
   --bg:#f5f5f7;
   --surface:#fff;
@@ -68,10 +61,7 @@ button{
   font:inherit;
 }
 
-
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar{
   position:fixed;
@@ -147,10 +137,7 @@ button{
   height:16px;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
   min-height:720px;
@@ -261,10 +248,7 @@ button{
   color:#111;
 }
 
-
-/* =========================
-   SECCIONES
-========================= */
+/* SECCIONES */
 
 .section{
   padding:82px 20px;
@@ -294,10 +278,7 @@ button{
   line-height:1.5;
 }
 
-
-/* =========================
-   PRODUCTOS
-========================= */
+/* PRODUCTOS */
 
 .products{
   max-width:1120px;
@@ -336,11 +317,11 @@ button{
   height:100%;
   object-fit:contain;
   transition:
-    transform .55s cubic-bezier(.2,.7,.2,1);
+    transform .55s cubic-bezier(.2,.8,.2,1);
 }
 
 .product-card:hover .product-image img{
-  transform:scale(1.08) translateY(-5px);
+  transform:scale(1.08) translateY(-8px);
 }
 
 .product-info{
@@ -392,13 +373,10 @@ button{
   margin-top:18px;
 }
 
-
-/* =========================
-   CINTA DE TECNOLOGÍAS
-========================= */
+/* CINTA DE TECNOLOGÍAS */
 
 .trust-section{
-  padding:34px 20px;
+  padding:30px 20px;
   background:var(--surface);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
@@ -410,7 +388,7 @@ button{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:42px;
+  gap:38px;
   flex-wrap:wrap;
 }
 
@@ -426,54 +404,42 @@ button{
   justify-content:center;
   gap:10px;
   color:var(--text);
-  font-size:20px;
-  letter-spacing:-.5px;
-  min-height:42px;
+  font-size:25px;
+  font-weight:500;
+  letter-spacing:-.7px;
+  min-height:45px;
 }
 
-/* LOGO ANYDESK */
-
-.trust-brand.anydesk-brand img{
-  width:34px;
-  height:34px;
+.trust-brand img{
+  width:36px;
+  height:36px;
   object-fit:contain;
 }
 
-.anydesk-word{
-  font-size:20px;
-  font-weight:600;
-  letter-spacing:-.8px;
-}
-
-/* CUKTECH */
-
-.cuktech-word{
-  font-size:20px;
-  font-weight:500;
-  letter-spacing:-.8px;
-}
-
-/* SOLZZE */
-
-.solzze-word{
-  font-family:"Domine", Georgia, serif;
-  font-size:23px;
+.anydesk-brand span{
   font-weight:500;
   letter-spacing:-1px;
 }
 
-/* DIVISORES */
+.cuktech-brand span{
+  font-weight:500;
+  letter-spacing:-1px;
+}
+
+.solzze-brand span{
+  font-family:"Dom Casual","Comic Sans MS",cursive;
+  font-size:32px;
+  font-weight:400;
+  letter-spacing:-1px;
+}
 
 .trust-divider{
   width:1px;
-  height:35px;
+  height:38px;
   background:var(--line);
 }
 
-
-/* =========================
-   SERVICIOS
-========================= */
+/* SERVICIOS */
 
 .service-grid{
   max-width:1120px;
@@ -572,10 +538,7 @@ button{
   color:rgba(255,255,255,.88);
 }
 
-
-/* =========================
-   NOSOTROS
-========================= */
+/* NOSOTROS */
 
 .about{
   background:var(--surface);
@@ -604,10 +567,7 @@ button{
   margin:22px auto 0;
 }
 
-
-/* =========================
-   HISTORIA
-========================= */
+/* HISTORIA */
 
 .history{
   padding-top:65px;
@@ -637,10 +597,7 @@ button{
   line-height:1.6;
 }
 
-
-/* =========================
-   CONTACTO
-========================= */
+/* CONTACTO */
 
 .contact{
   padding:90px 20px;
@@ -728,10 +685,7 @@ button{
   margin-top:14px;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
   background:#1d1d1f;
@@ -788,10 +742,7 @@ footer{
   font-size:12px;
 }
 
-
-/* =========================
-   WHATSAPP
-========================= */
+/* WHATSAPP */
 
 .whatsapp{
   position:fixed;
@@ -818,10 +769,7 @@ footer{
   height:24px;
 }
 
-
-/* =========================
-   ANIMACIONES
-========================= */
+/* ANIMACIONES */
 
 @keyframes fadeUp{
   from{
@@ -834,10 +782,7 @@ footer{
   }
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:800px){
 
@@ -897,67 +842,41 @@ footer{
     display:none;
   }
 
+  .trust-brand{
+    min-height:40px;
+  }
+
+  .solzze-brand span{
+    font-size:30px;
+  }
+
   .footer-bottom{
     flex-direction:column;
     gap:9px;
   }
 }
-
 </style>
 
 </head>
 
 <body>
 
-<!-- =========================
-     NAVBAR
-========================= -->
+<!-- NAVBAR -->
 
 <nav class="navbar">
-
   <div class="nav-inner">
 
-```
-<a href="#" class="logo">
-  Robert Software
-</a>
+<a href="#" class="logo">Robert Software</a>
 
 <ul class="nav-links">
-
-  <li>
-    <a href="#productos">
-      Productos
-    </a>
-  </li>
-
-  <li>
-    <a href="#servicios">
-      Servicios
-    </a>
-  </li>
-
-  <li>
-    <a href="#nosotros">
-      Nosotros
-    </a>
-  </li>
-
-  <li>
-    <a href="#historia">
-      Historia
-    </a>
-  </li>
-
-  <li>
-    <a href="#contacto">
-      Contacto
-    </a>
-  </li>
-
+  <li><a href="#productos">Productos</a></li>
+  <li><a href="#servicios">Servicios</a></li>
+  <li><a href="#nosotros">Nosotros</a></li>
+  <li><a href="#historia">Historia</a></li>
+  <li><a href="#contacto">Contacto</a></li>
 </ul>
 
 <div class="nav-actions">
-
   <button
     class="theme-toggle"
     id="themeToggle"
@@ -972,22 +891,16 @@ footer{
       stroke-width="1.8">
 
       <circle cx="12" cy="12" r="4"></circle>
-
       <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
 
     </svg>
-
   </button>
-
 </div>
 
   </div>
-
 </nav>
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1008,9 +921,7 @@ footer{
 
   <div class="hero-content">
 
-<div class="eyebrow">
-  ROBERT SOFTWARE
-</div>
+<div class="eyebrow">ROBERT SOFTWARE</div>
 
 <h1>
   Tecnología<br>
@@ -1024,12 +935,8 @@ footer{
 
 <div class="buttons">
 
-  <a
-    href="#productos"
-    class="button button-blue">
-
+  <a href="#productos" class="button button-blue">
     Ver soluciones
-
   </a>
 
   <a
@@ -1047,13 +954,9 @@ footer{
 
 </section>
 
-<!-- =========================
-     PRODUCTOS
-========================= -->
+<!-- PRODUCTOS -->
 
-<section
-  class="section"
-  id="productos">
+<section class="section" id="productos">
 
   <div class="section-head">
 
@@ -1062,13 +965,12 @@ footer{
 </div>
 
 <h2>
-  Diseñados para acompañarte.
+  Tecnología que aporta.
 </h2>
 
 <p>
-  Tecnología seleccionada para ofrecer rendimiento,
-  conectividad y soluciones prácticas para el trabajo,
-  estudio y uso diario.
+  Accesorios seleccionados por sus características,
+  rendimiento y utilidad para el trabajo y el día a día.
 </p>
 
   </div>
@@ -1098,28 +1000,16 @@ footer{
     </h3>
 
     <p>
-      Power Bank de alta capacidad diseñado para ofrecer
-      energía portátil y carga rápida cuando necesitas mantener
-      tus dispositivos funcionando.
+      Power bank de alta capacidad diseñado para ofrecer
+      energía portátil y carga rápida cuando más la necesitas.
     </p>
 
     <div class="features">
 
-      <span class="feature">
-        20,000 mAh
-      </span>
-
-      <span class="feature">
-        40W máx.
-      </span>
-
-      <span class="feature">
-        USB-C
-      </span>
-
-      <span class="feature">
-        Carga rápida
-      </span>
+      <span class="feature">20,000 mAh</span>
+      <span class="feature">40W máx.</span>
+      <span class="feature">USB-C</span>
+      <span class="feature">Carga rápida</span>
 
     </div>
 
@@ -1135,7 +1025,6 @@ footer{
   </div>
 
 </article>
-
 
 <!-- CARGADOR -->
 
@@ -1160,32 +1049,17 @@ footer{
     </h3>
 
     <p>
-      Cargador GaN compacto con carga rápida y gestión
-      eficiente de energía para smartphones, tablets
-      y otros dispositivos compatibles.
+      Cargador GaN compacto con carga rápida y múltiples
+      protocolos para una carga eficiente y segura.
     </p>
 
     <div class="features">
 
-      <span class="feature">
-        GaN
-      </span>
-
-      <span class="feature">
-        40W
-      </span>
-
-      <span class="feature">
-        USB-C
-      </span>
-
-      <span class="feature">
-        PD 3.0
-      </span>
-
-      <span class="feature">
-        PPS
-      </span>
+      <span class="feature">GaN</span>
+      <span class="feature">40W</span>
+      <span class="feature">USB-C</span>
+      <span class="feature">PD 3.0</span>
+      <span class="feature">PPS</span>
 
     </div>
 
@@ -1201,7 +1075,6 @@ footer{
   </div>
 
 </article>
-
 
 <!-- CABLE -->
 
@@ -1227,31 +1100,15 @@ footer{
 
     <p>
       Cable USB-C de alta potencia con pantalla OLED integrada
-      para visualizar en tiempo real la potencia de carga,
-      además de ofrecer conexión estable y carga rápida.
+      para visualizar en tiempo real la potencia de carga.
     </p>
 
     <div class="features">
 
-      <span class="feature">
-        Pantalla OLED
-      </span>
-
-      <span class="feature">
-        240W
-      </span>
-
-      <span class="feature">
-        6A
-      </span>
-
-      <span class="feature">
-        1.5 m
-      </span>
-
-      <span class="feature">
-        Magnético
-      </span>
+      <span class="feature">Pantalla OLED</span>
+      <span class="feature">240W</span>
+      <span class="feature">6A</span>
+      <span class="feature">1.5 m</span>
 
     </div>
 
@@ -1267,7 +1124,6 @@ footer{
   </div>
 
 </article>
-
 
 <!-- AUDÍFONOS -->
 
@@ -1292,28 +1148,16 @@ footer{
     </h3>
 
     <p>
-      Audífonos inalámbricos compactos con Bluetooth 5.4,
-      diseñados para música, llamadas y entretenimiento
-      con autonomía para el uso diario.
+      Audífonos inalámbricos con Bluetooth 5.4,
+      autonomía prolongada y conexión USB-C para carga.
     </p>
 
     <div class="features">
 
-      <span class="feature">
-        Bluetooth 5.4
-      </span>
-
-      <span class="feature">
-        8 h
-      </span>
-
-      <span class="feature">
-        32 h total
-      </span>
-
-      <span class="feature">
-        USB-C
-      </span>
+      <span class="feature">Bluetooth 5.4</span>
+      <span class="feature">8 h</span>
+      <span class="feature">32 h total</span>
+      <span class="feature">USB-C</span>
 
     </div>
 
@@ -1334,21 +1178,17 @@ footer{
 
 </section>
 
-<!-- =========================
-     CINTA DE TECNOLOGÍAS
-========================= -->
+<!-- CINTA DE TECNOLOGÍAS -->
 
 <section class="trust-section">
 
   <div class="trust-inner">
 
 <div class="trust-text">
-  Tecnología y soluciones con marcas seleccionadas
+  Soluciones y tecnología para trabajar mejor
 </div>
 
-
 <div class="trust-divider"></div>
-
 
 <!-- ANYDESK -->
 
@@ -1358,59 +1198,49 @@ footer{
     src="imagenes/anydesk.png"
     alt="AnyDesk">
 
-  <span class="anydesk-word">
+  <span>
     AnyDesk
   </span>
 
 </div>
 
-
 <div class="trust-divider"></div>
-
 
 <!-- CUKTECH -->
 
-<div class="trust-brand">
+<div class="trust-brand cuktech-brand">
 
-  <span class="cuktech-word">
+  <span>
     CUKTECH
   </span>
 
 </div>
 
-
 <div class="trust-divider"></div>
-
 
 <!-- SOLZZE -->
 
-<div class="trust-brand">
+<div class="trust-brand solzze-brand">
 
-  <span class="solzze-word">
+  <span>
     SOLZZE
   </span>
 
 </div>
 
-
 <div class="trust-divider"></div>
 
-
 <div class="trust-text">
-  Soluciones tecnológicas
+  Soporte técnico remoto
 </div>
 
   </div>
 
 </section>
 
-<!-- =========================
-     SERVICIOS
-========================= -->
+<!-- SERVICIOS -->
 
-<section
-  class="section"
-  id="servicios">
+<section class="section" id="servicios">
 
   <div class="section-head">
 
@@ -1458,7 +1288,6 @@ footer{
 
 </article>
 
-
 <article
   class="visual-card support"
   id="soporte">
@@ -1472,8 +1301,7 @@ footer{
 
     <p>
       Asistencia técnica remota para resolver incidencias,
-      configurar equipos y ayudarte a mantener tu entorno
-      tecnológico funcionando.
+      configurar equipos y ayudarte a mantener tus sistemas funcionando.
     </p>
 
     <a
@@ -1500,10 +1328,9 @@ footer{
   </h2>
 
   <p>
-    Soluciones para empresas y profesionales,
-    además de opciones para estudiantes y hogares.
-    Con atención cercana, soporte remoto y soluciones
-    tecnológicas pensadas para cada necesidad.
+    Desarrollamos soluciones orientadas principalmente a empresas
+    y profesionales, además de ofrecer alternativas para estudiantes
+    y hogares. Atención cercana, soporte remoto y soluciones prácticas.
   </p>
 
   <a
@@ -1520,13 +1347,9 @@ footer{
 
 </section>
 
-<!-- =========================
-     NOSOTROS
-========================= -->
+<!-- NOSOTROS -->
 
-<section
-  class="section about"
-  id="nosotros">
+<section class="section about" id="nosotros">
 
   <div class="about-inner">
 
@@ -1541,24 +1364,19 @@ footer{
 
 <p>
   Trabajamos para acercar soluciones tecnológicas de manera
-  sencilla, profesional y accesible. Nuestro enfoque está
-  especialmente orientado a empresas y profesionales que
-  necesitan resolver sus necesidades de TI, software y
-  soporte técnico de forma eficiente, sin dejar de atender
-  a estudiantes y hogares.
+  sencilla, profesional y accesible. Nuestro enfoque está orientado
+  especialmente a empresas y profesionales que necesitan resolver
+  sus necesidades de tecnología, software y soporte TI de forma
+  práctica y eficiente.
 </p>
 
   </div>
 
 </section>
 
-<!-- =========================
-     HISTORIA
-========================= -->
+<!-- HISTORIA -->
 
-<section
-  class="section history"
-  id="historia">
+<section class="section history" id="historia">
 
   <div class="history-box">
 
@@ -1572,42 +1390,44 @@ footer{
 </h2>
 
 <p>
-  Robert Software nació hace más de seis años a partir de una
-  pregunta sencilla: ¿cómo podíamos ayudar a nuestros clientes
-  con sus necesidades tecnológicas de una manera más práctica?
-  Fue así como comenzamos a apostar por el soporte técnico
-  remoto, permitiendo solucionar problemas sin que las personas
-  tuvieran que salir de casa o trasladar sus equipos.
+  Robert Software nació a partir de una idea sencilla:
+  encontrar una manera más práctica de ayudar a las personas
+  con sus necesidades tecnológicas. Al evaluar cómo podíamos
+  brindar una atención más cómoda y eficiente, identificamos
+  que muchas incidencias podían solucionarse de forma remota,
+  evitando que el cliente tuviera que trasladarse o llevar
+  su equipo a un establecimiento.
 </p>
 
 <p>
-  Con el tiempo, comprendimos que la atención remota podía ir
-  mucho más allá de resolver una incidencia puntual. Empezamos
-  a desarrollar un enfoque orientado a brindar soluciones
-  tecnológicas integrales, especialmente para empresas y
-  profesionales que necesitan herramientas de TI, software,
-  configuración y asistencia técnica para continuar trabajando.
+  Así comenzamos a desarrollar nuestro enfoque de soporte
+  técnico remoto, permitiendo atender problemas, configuraciones
+  e incidencias directamente a distancia. Este modelo nos permitió
+  acercarnos a nuestros clientes y ofrecer una atención más
+  rápida, cómoda y accesible.
 </p>
 
 <p>
-  Hoy Robert Software continúa evolucionando incorporando
-  software, accesorios y nuevas soluciones tecnológicas.
-  Mantenemos el mismo principio que nos impulsó desde el inicio:
-  utilizar la tecnología para resolver problemas de manera
-  sencilla, rápida y profesional.
+  Con el tiempo, evolucionamos hacia un enfoque más amplio:
+  ofrecer soluciones tecnológicas para empresas y profesionales,
+  incluyendo software, herramientas de productividad, soporte TI
+  y tecnología para sus operaciones diarias.
+</p>
+
+<p>
+  Hoy continuamos incorporando nuevos productos y soluciones,
+  incluyendo accesorios tecnológicos, manteniendo la misma visión
+  con la que comenzamos: utilizar la tecnología para resolver
+  necesidades reales de forma sencilla, profesional y cercana.
 </p>
 
   </div>
 
 </section>
 
-<!-- =========================
-     CONTACTO
-========================= -->
+<!-- CONTACTO -->
 
-<section
-  class="contact"
-  id="contacto">
+<section class="contact" id="contacto">
 
   <div class="contact-inner">
 
@@ -1627,9 +1447,7 @@ footer{
 
 </div>
 
-
 <div class="contact-cards">
-
 
   <!-- WHATSAPP -->
 
@@ -1667,7 +1485,6 @@ footer{
     </span>
 
   </a>
-
 
   <!-- CORREO -->
 
@@ -1710,7 +1527,6 @@ footer{
     </span>
 
   </a>
-
 
   <!-- WEB -->
 
@@ -1759,17 +1575,13 @@ footer{
 
 </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
   <div class="footer-inner">
 
-```
 <div class="footer-main">
-
 
   <div class="footer-brand">
 
@@ -1783,7 +1595,6 @@ footer{
     </p>
 
   </div>
-
 
   <div class="footer-column">
 
@@ -1812,7 +1623,6 @@ footer{
     </a>
 
   </div>
-
 
   <div class="footer-column">
 
@@ -1843,7 +1653,6 @@ footer{
 
 </div>
 
-
 <div class="footer-bottom">
 
   <span>
@@ -1860,9 +1669,7 @@ footer{
 
 </footer>
 
-<!-- =========================
-     BOTÓN WHATSAPP
-========================= -->
+<!-- BOTÓN WHATSAPP -->
 
 <a
 class="whatsapp"
@@ -1884,20 +1691,13 @@ aria-label="Contactar por WhatsApp">
 
 </a>
 
-<!-- =========================
-     DARK MODE
-========================= -->
+<!-- DARK MODE -->
 
 <script>
 
 const root = document.documentElement;
-
-const toggle =
-  document.getElementById('themeToggle');
-
-const icon =
-  document.getElementById('themeIcon');
-
+const toggle = document.getElementById('themeToggle');
+const icon = document.getElementById('themeIcon');
 
 function setTheme(theme){
 
@@ -1924,10 +1724,8 @@ function setTheme(theme){
 
 }
 
-
 const savedTheme =
   localStorage.getItem('rs-theme');
-
 
 setTheme(
 
@@ -1942,7 +1740,6 @@ setTheme(
   )
 
 );
-
 
 toggle.addEventListener(
   'click',
