@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -298,7 +297,7 @@ button{
 }
 
 .product-card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-8px);
   box-shadow:0 25px 65px rgba(0,0,0,.12);
 }
 
@@ -316,13 +315,11 @@ button{
   width:100%;
   height:100%;
   object-fit:contain;
-  transition:transform .55s ease;
+  transition:transform .45s ease;
 }
 
-/* EFECTO DE SUBIDA AL PASAR EL MOUSE */
-
 .product-card:hover .product-image img{
-  transform:translateY(-8px) scale(1.05);
+  transform:scale(1.08);
 }
 
 .product-info{
@@ -377,7 +374,7 @@ button{
 /* CINTA DE TECNOLOGÍAS */
 
 .trust-section{
-  padding:22px 20px;
+  padding:32px 20px;
   background:var(--surface);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
@@ -389,7 +386,7 @@ button{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:38px;
+  gap:40px;
   flex-wrap:wrap;
 }
 
@@ -400,23 +397,25 @@ button{
 }
 
 .trust-brand{
-  width:100px;
-  height:100px;
   display:flex;
   align-items:center;
-  justify-content:center;
+  gap:12px;
+  color:var(--text);
+  font-size:19px;
+  font-weight:600;
+  letter-spacing:-.5px;
 }
 
 .trust-brand img{
-  width:100px;
-  height:100px;
+  width:52px;
+  height:52px;
   object-fit:contain;
   display:block;
 }
 
 .trust-divider{
   width:1px;
-  height:55px;
+  height:45px;
   background:var(--line);
 }
 
@@ -817,18 +816,13 @@ footer{
     gap:22px;
   }
 
-  .trust-brand{
-    width:90px;
-    height:90px;
+  .trust-divider{
+    display:none;
   }
 
   .trust-brand img{
-    width:90px;
-    height:90px;
-  }
-
-  .trust-divider{
-    display:none;
+    width:52px;
+    height:52px;
   }
 
   .footer-bottom{
@@ -837,7 +831,6 @@ footer{
   }
 }
 </style>
-
 </head>
 
 <body>
@@ -847,34 +840,34 @@ footer{
 <nav class="navbar">
   <div class="nav-inner">
 
-<a href="#" class="logo">Robert Software</a>
+    <a href="#" class="logo">Robert Software</a>
 
-<ul class="nav-links">
-  <li><a href="#productos">Productos</a></li>
-  <li><a href="#servicios">Servicios</a></li>
-  <li><a href="#nosotros">Nosotros</a></li>
-  <li><a href="#historia">Historia</a></li>
-  <li><a href="#contacto">Contacto</a></li>
-</ul>
+    <ul class="nav-links">
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#historia">Historia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
 
-<div class="nav-actions">
-  <button
-    class="theme-toggle"
-    id="themeToggle"
-    aria-label="Cambiar modo de color"
-    title="Cambiar modo">
+    <div class="nav-actions">
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Cambiar modo de color"
+        title="Cambiar modo">
 
-    <svg id="themeIcon" viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.8">
+        <svg id="themeIcon" viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8">
 
-      <circle cx="12" cy="12" r="4"></circle>
-      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
 
-    </svg>
-  </button>
-</div>
+        </svg>
+      </button>
+    </div>
 
   </div>
 </nav>
@@ -883,51 +876,51 @@ footer{
 
 <section class="hero">
 
-<video
- class="hero-video"
- autoplay
- muted
- loop
- playsinline
- preload="metadata"
- aria-hidden="true">
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    aria-hidden="true">
 
-<source
-  src="https://res.cloudinary.com/whbw5qb4/video/upload/v1787974648/c3cedc2d41c641ed92349e910fb8c888.HD-1080p-7.2Mbps-42301090.mp4"
-  type="video/mp4">
+    <source
+      src="https://res.cloudinary.com/whbw5qb4/video/upload/v1787974648/c3cedc2d41c641ed92349e910fb8c888.HD-1080p-7.2Mbps-42301090.mp4"
+      type="video/mp4">
 
   </video>
 
   <div class="hero-content">
 
-<div class="eyebrow">ROBERT SOFTWARE</div>
+    <div class="eyebrow">ROBERT SOFTWARE</div>
 
-<h1>
-  Tecnología<br>
-  que trabaja para ti.
-</h1>
+    <h1>
+      Tecnología<br>
+      que trabaja para ti.
+    </h1>
 
-<p>
-  Soluciones tecnológicas, software, accesorios y soporte técnico remoto
-  para empresas, profesionales, estudiantes y hogares.
-</p>
+    <p>
+      Soluciones tecnológicas, software, accesorios y soporte técnico remoto
+      para empresas, profesionales, estudiantes y hogares.
+    </p>
 
-<div class="buttons">
+    <div class="buttons">
 
-  <a href="#productos" class="button button-blue">
-    Ver soluciones
-  </a>
+      <a href="#productos" class="button button-blue">
+        Ver soluciones
+      </a>
 
-  <a
-    href="https://wa.me/51945482880"
-    target="_blank"
-    class="button button-light">
+      <a
+        href="https://wa.me/51945482880"
+        target="_blank"
+        class="button button-light">
 
-    Hablar con nosotros
+        Hablar con nosotros
 
-  </a>
+      </a>
 
-</div>
+    </div>
 
   </div>
 
@@ -939,225 +932,220 @@ footer{
 
   <div class="section-head">
 
-```
-<div class="eyebrow">
-  TECNOLOGÍA Y ACCESORIOS
-</div>
+    <div class="eyebrow">
+      TECNOLOGÍA Y ACCESORIOS
+    </div>
 
-<h2>
-  Tecnología que hace la diferencia.
-</h2>
+    <h2>
+      Diseñados para acompañarte.
+    </h2>
 
-<p>
-  Seleccionamos productos con características pensadas para
-  ofrecer una mejor experiencia de carga, conectividad,
-  almacenamiento y entretenimiento.
-</p>
+    <p>
+      Tecnología seleccionada para ofrecer rendimiento,
+      practicidad y conectividad en el trabajo y el día a día.
+    </p>
 
   </div>
 
   <div class="products">
 
-<!-- POWER BANK -->
+    <!-- POWER BANK -->
 
-<article class="product-card">
+    <article class="product-card">
 
-  <div class="product-image">
+      <div class="product-image">
 
-    <img
-      src="imagenes/power.png"
-      alt="CUKTECH CP24 Power Bank">
+        <img
+          src="imagenes/power.png"
+          alt="CUKTECH CP24 Power Bank">
 
-  </div>
+      </div>
 
-  <div class="product-info">
+      <div class="product-info">
 
-    <div class="product-category">
-      CUKTECH · POWER BANK
-    </div>
+        <div class="product-category">
+          CUKTECH · POWER BANK
+        </div>
 
-    <h3>
-      CP24
-    </h3>
+        <h3>
+          CP24
+        </h3>
 
-    <p>
-      Power bank de alta capacidad diseñado para ofrecer
-      carga rápida y energía portátil cuando más la necesitas.
-    </p>
+        <p>
+          Power bank de alta capacidad diseñado para ofrecer
+          energía portátil y carga rápida cuando más la necesitas.
+        </p>
 
-    <div class="features">
+        <div class="features">
 
-      <span class="feature">20,000 mAh</span>
-      <span class="feature">40W máx.</span>
-      <span class="feature">USB-C</span>
-      <span class="feature">Carga rápida</span>
+          <span class="feature">20,000 mAh</span>
+          <span class="feature">40W máx.</span>
+          <span class="feature">USB-C</span>
+          <span class="feature">Carga rápida</span>
 
-    </div>
+        </div>
 
-    <a
-      class="product-link"
-      href="https://wa.me/51945482880"
-      target="_blank">
+        <a
+          class="product-link"
+          href="https://wa.me/51945482880"
+          target="_blank">
 
-      Consultar producto →
+          Consultar producto →
 
-    </a>
+        </a>
 
-  </div>
+      </div>
 
-</article>
+    </article>
 
+    <!-- CARGADOR -->
 
-<!-- CARGADOR -->
+    <article class="product-card">
 
-<article class="product-card">
+      <div class="product-image">
 
-  <div class="product-image">
+        <img
+          src="imagenes/cargador.png"
+          alt="CUKTECH AC301 40W">
 
-    <img
-      src="imagenes/cargador.png"
-      alt="CUKTECH AC301 40W">
+      </div>
 
-  </div>
+      <div class="product-info">
 
-  <div class="product-info">
+        <div class="product-category">
+          CUKTECH · CARGADOR
+        </div>
 
-    <div class="product-category">
-      CUKTECH · CARGADOR
-    </div>
+        <h3>
+          AC301 · 40W
+        </h3>
 
-    <h3>
-      AC301 · 40W
-    </h3>
+        <p>
+          Cargador GaN de 40W con carga rápida, formato compacto
+          y tecnología diseñada para una entrega de energía eficiente.
+        </p>
 
-    <p>
-      Cargador GaN compacto con carga rápida y tecnologías
-      PD 3.0 y PPS para una carga eficiente y segura.
-    </p>
+        <div class="features">
 
-    <div class="features">
+          <span class="feature">GaN</span>
+          <span class="feature">40W</span>
+          <span class="feature">USB-C</span>
+          <span class="feature">PD 3.0</span>
+          <span class="feature">PPS</span>
 
-      <span class="feature">GaN</span>
-      <span class="feature">40W</span>
-      <span class="feature">USB-C</span>
-      <span class="feature">PD 3.0</span>
-      <span class="feature">PPS</span>
+        </div>
 
-    </div>
+        <a
+          class="product-link"
+          href="https://wa.me/51945482880"
+          target="_blank">
 
-    <a
-      class="product-link"
-      href="https://wa.me/51945482880"
-      target="_blank">
+          Consultar producto →
 
-      Consultar producto →
+        </a>
 
-    </a>
+      </div>
 
-  </div>
+    </article>
 
-</article>
+    <!-- CABLE -->
 
+    <article class="product-card">
 
-<!-- CABLE -->
+      <div class="product-image">
 
-<article class="product-card">
+        <img
+          src="imagenes/cable.png"
+          alt="CUKTECH CMC615P">
 
-  <div class="product-image">
+      </div>
 
-    <img
-      src="imagenes/cable.png"
-      alt="CUKTECH CMC615P">
+      <div class="product-info">
 
-  </div>
+        <div class="product-category">
+          CUKTECH · CABLE
+        </div>
 
-  <div class="product-info">
+        <h3>
+          CMC615P
+        </h3>
 
-    <div class="product-category">
-      CUKTECH · CABLE
-    </div>
+        <p>
+          Cable USB-C de alta potencia con pantalla OLED integrada
+          para visualizar información de carga en tiempo real.
+        </p>
 
-    <h3>
-      CMC615P
-    </h3>
+        <div class="features">
 
-    <p>
-      Cable USB-C de alto rendimiento con pantalla OLED integrada
-      para visualizar información de carga en tiempo real.
-    </p>
+          <span class="feature">Pantalla OLED</span>
+          <span class="feature">240W</span>
+          <span class="feature">6A</span>
+          <span class="feature">1.5 m</span>
+          <span class="feature">Magnético</span>
 
-    <div class="features">
+        </div>
 
-      <span class="feature">Pantalla OLED</span>
-      <span class="feature">240W</span>
-      <span class="feature">6A</span>
-      <span class="feature">1.5 m</span>
-      <span class="feature">Magnético</span>
+        <a
+          class="product-link"
+          href="https://wa.me/51945482880"
+          target="_blank">
 
-    </div>
+          Consultar producto →
 
-    <a
-      class="product-link"
-      href="https://wa.me/51945482880"
-      target="_blank">
+        </a>
 
-      Consultar producto →
+      </div>
 
-    </a>
+    </article>
 
-  </div>
+    <!-- AUDIFONOS -->
 
-</article>
+    <article class="product-card">
 
+      <div class="product-image">
 
-<!-- AUDÍFONOS -->
+        <img
+          src="imagenes/audifo.png"
+          alt="1HORA AUT216">
 
-<article class="product-card">
+      </div>
 
-  <div class="product-image">
+      <div class="product-info">
 
-    <img
-      src="imagenes/audifo.png"
-      alt="1HORA AUT216">
+        <div class="product-category">
+          1HORA · AUDÍFONOS
+        </div>
 
-  </div>
+        <h3>
+          AUT216
+        </h3>
 
-  <div class="product-info">
+        <p>
+          Audífonos inalámbricos con Bluetooth 5.4, autonomía
+          prolongada y estuche de carga USB-C para uso diario.
+        </p>
 
-    <div class="product-category">
-      1HORA · AUDÍFONOS
-    </div>
+        <div class="features">
 
-    <h3>
-      AUT216
-    </h3>
+          <span class="feature">Bluetooth 5.4</span>
+          <span class="feature">8 h</span>
+          <span class="feature">32 h total</span>
+          <span class="feature">USB-C</span>
 
-    <p>
-      Audífonos inalámbricos con Bluetooth 5.4 y autonomía
-      extendida para música, llamadas y entretenimiento.
-    </p>
+        </div>
 
-    <div class="features">
+        <a
+          class="product-link"
+          href="https://wa.me/51945482880"
+          target="_blank">
 
-      <span class="feature">Bluetooth 5.4</span>
-      <span class="feature">8 h</span>
-      <span class="feature">32 h total</span>
-      <span class="feature">USB-C</span>
+          Consultar producto →
 
-    </div>
+        </a>
 
-    <a
-      class="product-link"
-      href="https://wa.me/51945482880"
-      target="_blank">
+      </div>
 
-      Consultar producto →
-
-    </a>
-
-  </div>
-
-</article>
+    </article>
 
   </div>
 
@@ -1169,31 +1157,43 @@ footer{
 
   <div class="trust-inner">
 
-<div class="trust-text">
-  Tecnología y soluciones para trabajar mejor
-</div>
+    <div class="trust-text">
+      Soluciones y tecnología para trabajar mejor
+    </div>
 
-<div class="trust-divider"></div>
+    <div class="trust-divider"></div>
 
-<div class="trust-brand">
-  <img
-    src="imagenes/anydesk.png"
-    alt="AnyDesk">
-</div>
+    <div class="trust-brand">
 
-<div class="trust-divider"></div>
+      <img
+        src="imagenes/anydesk.png"
+        alt="AnyDesk">
 
-<div class="trust-brand">
-  <img
-    src="imagenes/cuktech.png"
-    alt="CUKTECH">
-</div>
+      <span>
+        AnyDesk
+      </span>
 
-<div class="trust-divider"></div>
+    </div>
 
-<div class="trust-text">
-  Soporte técnico remoto · Tecnología y accesorios
-</div>
+    <div class="trust-divider"></div>
+
+    <div class="trust-brand">
+
+      <img
+        src="imagenes/cuktech.png"
+        alt="CUKTECH">
+
+      <span>
+        CUKTECH
+      </span>
+
+    </div>
+
+    <div class="trust-divider"></div>
+
+    <div class="trust-text">
+      Soporte técnico remoto
+    </div>
 
   </div>
 
@@ -1205,107 +1205,105 @@ footer{
 
   <div class="section-head">
 
-<div class="eyebrow">
-  SOLUCIONES
-</div>
+    <div class="eyebrow">
+      SOLUCIONES
+    </div>
 
-<h2>
-  Tecnología para trabajar mejor.
-</h2>
+    <h2>
+      Tecnología para trabajar mejor.
+    </h2>
 
-<p>
-  Desde soluciones de software hasta soporte técnico remoto,
-  ayudamos a que la tecnología sea una herramienta y no un problema.
-</p>
+    <p>
+      Desde soluciones de software hasta soporte técnico remoto,
+      ayudamos a que la tecnología sea una herramienta y no un problema.
+    </p>
 
   </div>
 
   <div class="service-grid">
 
-<article class="visual-card software">
+    <article class="visual-card software">
 
-  <div>
+      <div>
 
-    <h3>
-      Soluciones<br>
-      de software.
-    </h3>
+        <h3>
+          Soluciones<br>
+          de software.
+        </h3>
 
-    <p>
-      Herramientas para productividad, diseño, ingeniería,
-      creatividad, trabajo y estudio.
-    </p>
+        <p>
+          Herramientas para productividad, diseño, ingeniería,
+          creatividad, trabajo y estudio.
+        </p>
 
-    <a
-      class="card-link"
-      href="https://wa.me/51945482880"
-      target="_blank">
+        <a
+          class="card-link"
+          href="https://wa.me/51945482880"
+          target="_blank">
 
-      Consultar soluciones →
+          Consultar soluciones →
 
-    </a>
+        </a>
 
-  </div>
+      </div>
 
-</article>
+    </article>
 
+    <article
+      class="visual-card support"
+      id="soporte">
 
-<article
-  class="visual-card support"
-  id="soporte">
+      <div>
 
-  <div>
+        <h3>
+          Soporte TI.<br>
+          A distancia.
+        </h3>
 
-    <h3>
-      Soporte TI.<br>
-      A distancia.
-    </h3>
+        <p>
+          Asistencia técnica remota para resolver incidencias,
+          configurar equipos y ayudarte a mantener tus sistemas funcionando.
+        </p>
 
-    <p>
-      Asistencia técnica remota para resolver incidencias,
-      configurar equipos y ayudarte a mantener tus sistemas
-      funcionando.
-    </p>
+        <a
+          class="card-link"
+          href="https://wa.me/51945482880"
+          target="_blank">
 
-    <a
-      class="card-link"
-      href="https://wa.me/51945482880"
-      target="_blank">
+          Solicitar soporte →
 
-      Solicitar soporte →
+        </a>
 
-    </a>
+      </div>
 
-  </div>
-
-</article>
+    </article>
 
   </div>
 
   <div class="full-card">
 
-<div>
+    <div>
 
-  <h2>
-    Tecnología para cada necesidad.
-  </h2>
+      <h2>
+        Tecnología para cada necesidad.
+      </h2>
 
-  <p>
-    Desarrollamos soluciones orientadas principalmente a empresas
-    y profesionales que necesitan soporte TI, software y asistencia
-    tecnológica eficiente. También ofrecemos soluciones para
-    estudiantes y hogares.
-  </p>
+      <p>
+        Desarrollamos soluciones orientadas principalmente a empresas
+        y profesionales que necesitan soporte, software y herramientas
+        tecnológicas confiables. También atendemos las necesidades
+        de estudiantes y hogares.
+      </p>
 
-  <a
-    class="card-link"
-    href="#contacto">
+      <a
+        class="card-link"
+        href="#contacto">
 
-    Conocer más →
+        Conocer más →
 
-  </a>
+      </a>
 
-</div>
+    </div>
 
   </div>
 
@@ -1317,28 +1315,22 @@ footer{
 
   <div class="about-inner">
 
-<div class="eyebrow">
-  ROBERT SOFTWARE
-</div>
+    <div class="eyebrow">
+      ROBERT SOFTWARE
+    </div>
 
-<h2>
-  Soluciones tecnológicas,
-  sin complicaciones.
-</h2>
+    <h2>
+      Soluciones tecnológicas,
+      sin complicaciones.
+    </h2>
 
-<p>
-  Trabajamos para acercar soluciones tecnológicas de manera
-  sencilla, profesional y accesible. Nuestro enfoque está
-  especialmente orientado a empresas y profesionales que
-  necesitan resolver sus necesidades de TI con rapidez,
-  soporte remoto y herramientas adecuadas para su trabajo.
-</p>
-
-<p>
-  También brindamos soluciones para estudiantes y hogares,
-  manteniendo siempre una atención cercana y enfocada en
-  encontrar la alternativa más adecuada para cada necesidad.
-</p>
+    <p>
+      Brindamos soluciones tecnológicas de manera sencilla,
+      profesional y accesible. Nuestro enfoque está orientado
+      especialmente a empresas y profesionales que necesitan
+      resolver sus necesidades de TI con rapidez y atención
+      remota, sin dejar de atender a estudiantes y hogares.
+    </p>
 
   </div>
 
@@ -1350,46 +1342,50 @@ footer{
 
   <div class="history-box">
 
-<div class="eyebrow">
-  NUESTRA HISTORIA
-</div>
+    <div class="eyebrow">
+      NUESTRA HISTORIA
+    </div>
 
-<h2>
-  Más de 6 años
-  evolucionando contigo.
-</h2>
+    <h2>
+      Más de 6 años
+      evolucionando contigo.
+    </h2>
 
-<p>
-  Robert Software nació hace más de seis años a partir de una
-  idea sencilla: encontrar una forma más práctica y eficiente
-  de ayudar a las personas con sus necesidades tecnológicas.
-</p>
+    <p>
+      Robert Software nació hace más de seis años a partir de una
+      idea sencilla: encontrar una forma más práctica de ayudar
+      a las personas con sus necesidades tecnológicas.
+    </p>
 
-<p>
-  Al evaluar cómo podíamos mejorar la atención tradicional,
-  vimos que muchos problemas podían solucionarse de manera
-  remota, evitando desplazamientos innecesarios y permitiendo
-  que nuestros clientes recibieran asistencia desde donde se
-  encontraran. Así comenzamos a desarrollar nuestro enfoque
-  de soporte técnico remoto.
-</p>
+    <p>
+      Al evaluar cómo podíamos brindar un mejor servicio, vimos
+      que muchas incidencias podían resolverse de manera remota,
+      evitando que nuestros clientes tuvieran que salir de casa,
+      trasladar sus equipos o perder tiempo buscando asistencia.
+      Así comenzó nuestro enfoque en el soporte técnico remoto.
+    </p>
 
-<p>
-  Con el tiempo, esta experiencia nos permitió ampliar nuestro
-  trabajo y evolucionar hacia soluciones tecnológicas más
-  completas. En el ámbito empresarial, comenzamos a enfocarnos
-  en brindar soluciones de TI, software y asistencia técnica
-  orientadas a las necesidades reales de cada negocio y
-  profesional.
-</p>
+    <p>
+      Con el tiempo, fuimos ampliando nuestra propuesta. El soporte
+      dejó de ser únicamente una respuesta ante un problema y pasó
+      a convertirse en una parte de una solución tecnológica más
+      completa, incorporando software, herramientas y tecnología
+      para diferentes necesidades.
+    </p>
 
-<p>
-  Hoy Robert Software continúa creciendo e incorporando nuevas
-  tecnologías, software y accesorios, manteniendo el mismo
-  objetivo con el que comenzó: ofrecer soluciones profesionales,
-  accesibles y prácticas que permitan a nuestros clientes
-  aprovechar mejor la tecnología.
-</p>
+    <p>
+      Actualmente ponemos especial atención en las necesidades de
+      empresas y profesionales, ofreciendo soluciones de TI,
+      software y asistencia técnica remota que les permitan
+      continuar trabajando de forma eficiente.
+    </p>
+
+    <p>
+      También seguimos atendiendo a estudiantes y hogares,
+      manteniendo la cercanía que nos acompañó desde el comienzo:
+      utilizar la tecnología para solucionar problemas de forma
+      práctica, clara y accesible.
+    </p>
 
   </div>
 
@@ -1401,147 +1397,145 @@ footer{
 
   <div class="contact-inner">
 
-<div class="contact-title">
+    <div class="contact-title">
 
-  <div class="eyebrow">
-    CONTACTO
-  </div>
+      <div class="eyebrow">
+        CONTACTO
+      </div>
 
-  <h2>
-    Hablemos de tecnología.
-  </h2>
+      <h2>
+        Hablemos de tecnología.
+      </h2>
 
-  <p>
-    Cuéntanos qué necesitas y encontraremos una solución.
-  </p>
-
-</div>
-
-<div class="contact-cards">
-
-  <!-- WHATSAPP -->
-
-  <a
-    class="contact-card"
-    href="https://wa.me/51945482880"
-    target="_blank">
-
-    <div class="icon">
-
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8">
-
-        <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"></path>
-
-        <path d="M8.5 9.5c.4 2 2 3.6 4 4"></path>
-
-      </svg>
+      <p>
+        Cuéntanos qué necesitas y encontraremos una solución.
+      </p>
 
     </div>
 
-    <small>
-      WHATSAPP
-    </small>
+    <div class="contact-cards">
 
-    <strong>
-      +51 945 482 880
-    </strong>
+      <!-- WHATSAPP -->
 
-    <span class="go">
-      Escribir ahora →
-    </span>
+      <a
+        class="contact-card"
+        href="https://wa.me/51945482880"
+        target="_blank">
 
-  </a>
+        <div class="icon">
 
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8">
 
-  <!-- CORREO -->
+            <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"></path>
 
-  <a
-    class="contact-card"
-    href="mailto:soporte@robert-software.com">
+            <path d="M8.5 9.5c.4 2 2 3.6 4 4"></path>
 
-    <div class="icon">
+          </svg>
 
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8">
+        </div>
 
-        <rect
-          x="3"
-          y="5"
-          width="18"
-          height="14"
-          rx="2">
-        </rect>
+        <small>
+          WHATSAPP
+        </small>
 
-        <path d="m3 7 9 6 9-6"></path>
+        <strong>
+          +51 945 482 880
+        </strong>
 
-      </svg>
+        <span class="go">
+          Escribir ahora →
+        </span>
+
+      </a>
+
+      <!-- CORREO -->
+
+      <a
+        class="contact-card"
+        href="mailto:soporte@robert-software.com">
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8">
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2">
+            </rect>
+
+            <path d="m3 7 9 6 9-6"></path>
+
+          </svg>
+
+        </div>
+
+        <small>
+          CORREO ELECTRÓNICO
+        </small>
+
+        <strong>
+          soporte@robert-software.com
+        </strong>
+
+        <span class="go">
+          Enviar correo →
+        </span>
+
+      </a>
+
+      <!-- WEB -->
+
+      <a
+        class="contact-card"
+        href="https://robert-software.com"
+        target="_blank">
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8">
+
+            <circle
+              cx="12"
+              cy="12"
+              r="9">
+            </circle>
+
+            <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+
+          </svg>
+
+        </div>
+
+        <small>
+          SITIO WEB
+        </small>
+
+        <strong>
+          robert-software.com
+        </strong>
+
+        <span class="go">
+          Visitar sitio →
+        </span>
+
+      </a>
 
     </div>
-
-    <small>
-      CORREO ELECTRÓNICO
-    </small>
-
-    <strong>
-      soporte@robert-software.com
-    </strong>
-
-    <span class="go">
-      Enviar correo →
-    </span>
-
-  </a>
-
-
-  <!-- WEB -->
-
-  <a
-    class="contact-card"
-    href="https://robert-software.com"
-    target="_blank">
-
-    <div class="icon">
-
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8">
-
-        <circle
-          cx="12"
-          cy="12"
-          r="9">
-        </circle>
-
-        <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
-
-      </svg>
-
-    </div>
-
-    <small>
-      SITIO WEB
-    </small>
-
-    <strong>
-      robert-software.com
-    </strong>
-
-    <span class="go">
-      Visitar sitio →
-    </span>
-
-  </a>
-
-</div>
 
   </div>
 
@@ -1553,92 +1547,89 @@ footer{
 
   <div class="footer-inner">
 
-<div class="footer-main">
+    <div class="footer-main">
 
-  <div class="footer-brand">
+      <div class="footer-brand">
 
-    <h3>
-      Robert Software
-    </h3>
+        <h3>
+          Robert Software
+        </h3>
 
-    <p>
-      Tecnología, software, accesorios y soporte técnico remoto
-      para empresas, profesionales, estudiantes y hogares.
-    </p>
+        <p>
+          Tecnología, software, accesorios y soporte técnico remoto
+          para empresas, profesionales, estudiantes y hogares.
+        </p>
 
-  </div>
+      </div>
 
+      <div class="footer-column">
 
-  <div class="footer-column">
+        <h4>
+          Explorar
+        </h4>
 
-    <h4>
-      Explorar
-    </h4>
+        <a href="#productos">
+          Productos
+        </a>
 
-    <a href="#productos">
-      Productos
-    </a>
+        <a href="#servicios">
+          Servicios
+        </a>
 
-    <a href="#servicios">
-      Servicios
-    </a>
+        <a href="#soporte">
+          Soporte técnico
+        </a>
 
-    <a href="#soporte">
-      Soporte técnico
-    </a>
+        <a href="#nosotros">
+          Nosotros
+        </a>
 
-    <a href="#nosotros">
-      Nosotros
-    </a>
+        <a href="#historia">
+          Historia
+        </a>
 
-    <a href="#historia">
-      Historia
-    </a>
+      </div>
 
-  </div>
+      <div class="footer-column">
 
+        <h4>
+          Contacto
+        </h4>
 
-  <div class="footer-column">
+        <a
+          href="https://wa.me/51945482880"
+          target="_blank">
 
-    <h4>
-      Contacto
-    </h4>
+          WhatsApp
 
-    <a
-      href="https://wa.me/51945482880"
-      target="_blank">
+        </a>
 
-      WhatsApp
+        <a
+          href="mailto:soporte@robert-software.com">
 
-    </a>
+          Correo
 
-    <a
-      href="mailto:soporte@robert-software.com">
+        </a>
 
-      Correo
+        <a href="tel:+51945482880">
+          +51 945 482 880
+        </a>
 
-    </a>
+      </div>
 
-    <a href="tel:+51945482880">
-      +51 945 482 880
-    </a>
+    </div>
 
-  </div>
+    <div class="footer-bottom">
 
-</div>
+      <span>
+        © 2026 Robert Software. Todos los derechos reservados.
+      </span>
 
+      <span>
+        Lima, Perú
+      </span>
 
-<div class="footer-bottom">
-
-  <span>
-    © 2026 Robert Software. Todos los derechos reservados.
-  </span>
-
-  <span>
-    Lima, Perú
-  </span>
-
-</div>
+    </div>
 
   </div>
 
@@ -1647,20 +1638,20 @@ footer{
 <!-- BOTÓN WHATSAPP -->
 
 <a
-class="whatsapp"
-href="https://wa.me/51945482880"
-target="_blank"
-aria-label="Contactar por WhatsApp">
+  class="whatsapp"
+  href="https://wa.me/51945482880"
+  target="_blank"
+  aria-label="Contactar por WhatsApp">
 
-<svg
- viewBox="0 0 24 24"
- fill="none"
- stroke="currentColor"
- stroke-width="1.8">
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.8">
 
-<path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"></path>
+    <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"></path>
 
-<path d="M8.5 9.5c.4 2 2 3.6 4 4"></path>
+    <path d="M8.5 9.5c.4 2 2 3.6 4 4"></path>
 
   </svg>
 
@@ -1696,6 +1687,7 @@ function setTheme(theme){
     :
 
     '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>';
+
 }
 
 const savedTheme =
