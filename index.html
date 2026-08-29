@@ -61,9 +61,7 @@ button{
   font:inherit;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar{
   position:fixed;
@@ -139,9 +137,7 @@ button{
   height:16px;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
   min-height:720px;
@@ -252,9 +248,7 @@ button{
   color:#111;
 }
 
-/* =========================
-   SECCIONES
-========================= */
+/* SECCIONES */
 
 .section{
   padding:82px 20px;
@@ -284,9 +278,7 @@ button{
   line-height:1.5;
 }
 
-/* =========================
-   PRODUCTOS
-========================= */
+/* PRODUCTOS */
 
 .products{
   max-width:1120px;
@@ -302,11 +294,11 @@ button{
   overflow:hidden;
   border:1px solid var(--line);
   box-shadow:var(--shadow);
-  transition:transform .35s ease,box-shadow .35s ease;
+  transition:transform .3s,box-shadow .3s;
 }
 
 .product-card:hover{
-  transform:translateY(-7px);
+  transform:translateY(-5px);
   box-shadow:0 25px 65px rgba(0,0,0,.12);
 }
 
@@ -324,14 +316,13 @@ button{
   width:100%;
   height:100%;
   object-fit:contain;
-  transition:
-    transform .6s cubic-bezier(.2,.8,.2,1),
-    opacity .4s ease;
+  transition:transform .55s ease;
 }
 
-/* Animación de la imagen al pasar el cursor */
+/* EFECTO DE SUBIDA AL PASAR EL MOUSE */
+
 .product-card:hover .product-image img{
-  transform:translateY(-10px) scale(1.06);
+  transform:translateY(-8px) scale(1.05);
 }
 
 .product-info{
@@ -383,24 +374,22 @@ button{
   margin-top:18px;
 }
 
-/* =========================
-   CINTA DE TECNOLOGÍAS
-========================= */
+/* CINTA DE TECNOLOGÍAS */
 
 .trust-section{
-  padding:34px 20px;
+  padding:22px 20px;
   background:var(--surface);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
 
 .trust-inner{
-  max-width:900px;
+  max-width:1000px;
   margin:auto;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:45px;
+  gap:38px;
   flex-wrap:wrap;
 }
 
@@ -411,29 +400,27 @@ button{
 }
 
 .trust-brand{
+  width:100px;
+  height:100px;
   display:flex;
   align-items:center;
   justify-content:center;
-  width:130px;
-  height:48px;
 }
 
 .trust-brand img{
-  width:125px;
-  height:42px;
+  width:100px;
+  height:100px;
   object-fit:contain;
   display:block;
 }
 
 .trust-divider{
   width:1px;
-  height:35px;
+  height:55px;
   background:var(--line);
 }
 
-/* =========================
-   SERVICIOS
-========================= */
+/* SERVICIOS */
 
 .service-grid{
   max-width:1120px;
@@ -532,9 +519,7 @@ button{
   color:rgba(255,255,255,.88);
 }
 
-/* =========================
-   NOSOTROS
-========================= */
+/* NOSOTROS */
 
 .about{
   background:var(--surface);
@@ -563,9 +548,7 @@ button{
   margin:22px auto 0;
 }
 
-/* =========================
-   HISTORIA
-========================= */
+/* HISTORIA */
 
 .history{
   padding-top:65px;
@@ -595,9 +578,7 @@ button{
   line-height:1.6;
 }
 
-/* =========================
-   CONTACTO
-========================= */
+/* CONTACTO */
 
 .contact{
   padding:90px 20px;
@@ -685,9 +666,7 @@ button{
   margin-top:14px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
   background:#1d1d1f;
@@ -744,9 +723,7 @@ footer{
   font-size:12px;
 }
 
-/* =========================
-   WHATSAPP
-========================= */
+/* WHATSAPP */
 
 .whatsapp{
   position:fixed;
@@ -773,10 +750,6 @@ footer{
   height:24px;
 }
 
-/* =========================
-   ANIMACIONES
-========================= */
-
 @keyframes fadeUp{
   from{
     opacity:0;
@@ -788,9 +761,7 @@ footer{
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:800px){
 
@@ -846,6 +817,16 @@ footer{
     gap:22px;
   }
 
+  .trust-brand{
+    width:90px;
+    height:90px;
+  }
+
+  .trust-brand img{
+    width:90px;
+    height:90px;
+  }
+
   .trust-divider{
     display:none;
   }
@@ -854,15 +835,6 @@ footer{
     flex-direction:column;
     gap:9px;
   }
-
-  .trust-brand{
-    width:130px;
-  }
-
-  .trust-brand img{
-    width:120px;
-    height:42px;
-  }
 }
 </style>
 
@@ -870,9 +842,7 @@ footer{
 
 <body>
 
-<!-- =========================
-     NAVBAR
-========================= -->
+<!-- NAVBAR -->
 
 <nav class="navbar">
   <div class="nav-inner">
@@ -909,9 +879,7 @@ footer{
   </div>
 </nav>
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -965,25 +933,25 @@ footer{
 
 </section>
 
-<!-- =========================
-     PRODUCTOS
-========================= -->
+<!-- PRODUCTOS -->
 
 <section class="section" id="productos">
 
   <div class="section-head">
 
+```
 <div class="eyebrow">
   TECNOLOGÍA Y ACCESORIOS
 </div>
 
 <h2>
-  Tecnología que te acompaña.
+  Tecnología que hace la diferencia.
 </h2>
 
 <p>
-  Accesorios seleccionados por sus características, rendimiento
-  y utilidad para el trabajo, estudio y uso diario.
+  Seleccionamos productos con características pensadas para
+  ofrecer una mejor experiencia de carga, conectividad,
+  almacenamiento y entretenimiento.
 </p>
 
   </div>
@@ -1014,7 +982,7 @@ footer{
 
     <p>
       Power bank de alta capacidad diseñado para ofrecer
-      carga rápida y autonomía portátil cuando más la necesitas.
+      carga rápida y energía portátil cuando más la necesitas.
     </p>
 
     <div class="features">
@@ -1063,8 +1031,8 @@ footer{
     </h3>
 
     <p>
-      Cargador GaN compacto con carga rápida y tecnología
-      diseñada para entregar energía de forma eficiente y estable.
+      Cargador GaN compacto con carga rápida y tecnologías
+      PD 3.0 y PPS para una carga eficiente y segura.
     </p>
 
     <div class="features">
@@ -1114,7 +1082,7 @@ footer{
     </h3>
 
     <p>
-      Cable USB-C de alta potencia con pantalla OLED integrada
+      Cable USB-C de alto rendimiento con pantalla OLED integrada
       para visualizar información de carga en tiempo real.
     </p>
 
@@ -1165,8 +1133,8 @@ footer{
     </h3>
 
     <p>
-      Audífonos inalámbricos con Bluetooth 5.4, autonomía
-      prolongada y estuche de carga USB-C para uso diario.
+      Audífonos inalámbricos con Bluetooth 5.4 y autonomía
+      extendida para música, llamadas y entretenimiento.
     </p>
 
     <div class="features">
@@ -1195,9 +1163,7 @@ footer{
 
 </section>
 
-<!-- =========================
-     CINTA DE TECNOLOGÍAS
-========================= -->
+<!-- CINTA DE TECNOLOGÍAS -->
 
 <section class="trust-section">
 
@@ -1226,16 +1192,14 @@ footer{
 <div class="trust-divider"></div>
 
 <div class="trust-text">
-  Soporte técnico remoto
+  Soporte técnico remoto · Tecnología y accesorios
 </div>
 
   </div>
 
 </section>
 
-<!-- =========================
-     SERVICIOS
-========================= -->
+<!-- SERVICIOS -->
 
 <section class="section" id="servicios">
 
@@ -1299,8 +1263,8 @@ footer{
 
     <p>
       Asistencia técnica remota para resolver incidencias,
-      configurar equipos y ayudarte a mantener tu entorno
-      tecnológico funcionando.
+      configurar equipos y ayudarte a mantener tus sistemas
+      funcionando.
     </p>
 
     <a
@@ -1328,9 +1292,9 @@ footer{
 
   <p>
     Desarrollamos soluciones orientadas principalmente a empresas
-    y profesionales que necesitan soporte, software y herramientas
-    tecnológicas para sus operaciones. También ofrecemos soluciones
-    para estudiantes y hogares.
+    y profesionales que necesitan soporte TI, software y asistencia
+    tecnológica eficiente. También ofrecemos soluciones para
+    estudiantes y hogares.
   </p>
 
   <a
@@ -1347,9 +1311,7 @@ footer{
 
 </section>
 
-<!-- =========================
-     NOSOTROS
-========================= -->
+<!-- NOSOTROS -->
 
 <section class="section about" id="nosotros">
 
@@ -1365,20 +1327,24 @@ footer{
 </h2>
 
 <p>
-  En Robert Software acercamos tecnología, software y soporte
-  técnico remoto a empresas, profesionales y usuarios que
-  necesitan soluciones prácticas y confiables. Nuestro enfoque
-  combina atención personalizada, asistencia a distancia y
-  herramientas tecnológicas adaptadas a cada necesidad.
+  Trabajamos para acercar soluciones tecnológicas de manera
+  sencilla, profesional y accesible. Nuestro enfoque está
+  especialmente orientado a empresas y profesionales que
+  necesitan resolver sus necesidades de TI con rapidez,
+  soporte remoto y herramientas adecuadas para su trabajo.
+</p>
+
+<p>
+  También brindamos soluciones para estudiantes y hogares,
+  manteniendo siempre una atención cercana y enfocada en
+  encontrar la alternativa más adecuada para cada necesidad.
 </p>
 
   </div>
 
 </section>
 
-<!-- =========================
-     HISTORIA
-========================= -->
+<!-- HISTORIA -->
 
 <section class="section history" id="historia">
 
@@ -1400,35 +1366,36 @@ footer{
 </p>
 
 <p>
-  Al evaluar cómo podíamos brindar una mejor atención, vimos que
-  muchas incidencias podían solucionarse de manera remota, sin
-  que el cliente tuviera que salir de casa, trasladar su equipo
-  o esperar una atención presencial. Así comenzamos a desarrollar
-  nuestro enfoque de soporte técnico remoto.
+  Al evaluar cómo podíamos mejorar la atención tradicional,
+  vimos que muchos problemas podían solucionarse de manera
+  remota, evitando desplazamientos innecesarios y permitiendo
+  que nuestros clientes recibieran asistencia desde donde se
+  encontraran. Así comenzamos a desarrollar nuestro enfoque
+  de soporte técnico remoto.
 </p>
 
 <p>
-  Con el tiempo, este modelo evolucionó. Dejamos de enfocarnos
-  únicamente en resolver problemas puntuales y comenzamos a
-  ofrecer soluciones tecnológicas más completas para empresas
-  y profesionales, incluyendo software, asistencia técnica,
-  configuración y orientación en herramientas de TI.
+  Con el tiempo, esta experiencia nos permitió ampliar nuestro
+  trabajo y evolucionar hacia soluciones tecnológicas más
+  completas. En el ámbito empresarial, comenzamos a enfocarnos
+  en brindar soluciones de TI, software y asistencia técnica
+  orientadas a las necesidades reales de cada negocio y
+  profesional.
 </p>
 
 <p>
-  Hoy continuamos incorporando nuevas tecnologías y productos,
-  desde software y servicios hasta accesorios tecnológicos,
-  manteniendo nuestra visión inicial: ofrecer soluciones
-  profesionales de una manera cercana, práctica y accesible.
+  Hoy Robert Software continúa creciendo e incorporando nuevas
+  tecnologías, software y accesorios, manteniendo el mismo
+  objetivo con el que comenzó: ofrecer soluciones profesionales,
+  accesibles y prácticas que permitan a nuestros clientes
+  aprovechar mejor la tecnología.
 </p>
 
   </div>
 
 </section>
 
-<!-- =========================
-     CONTACTO
-========================= -->
+<!-- CONTACTO -->
 
 <section class="contact" id="contacto">
 
@@ -1450,9 +1417,7 @@ footer{
 
 </div>
 
-
 <div class="contact-cards">
-
 
   <!-- WHATSAPP -->
 
@@ -1582,9 +1547,7 @@ footer{
 
 </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1681,9 +1644,7 @@ footer{
 
 </footer>
 
-<!-- =========================
-     BOTÓN WHATSAPP
-========================= -->
+<!-- BOTÓN WHATSAPP -->
 
 <a
 class="whatsapp"
@@ -1705,9 +1666,7 @@ aria-label="Contactar por WhatsApp">
 
 </a>
 
-<!-- =========================
-     DARK MODE
-========================= -->
+<!-- DARK MODE -->
 
 <script>
 
@@ -1737,7 +1696,6 @@ function setTheme(theme){
     :
 
     '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>';
-
 }
 
 const savedTheme =
